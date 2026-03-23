@@ -72,18 +72,18 @@ function LogoMarquee() {
 
   return (
     <div ref={containerRef} className="relative w-full overflow-hidden">
-      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-24 z-10 bg-gradient-to-r from-white dark:from-[#0a0a0f] to-transparent" />
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-24 z-10 bg-gradient-to-l from-white dark:from-[#0a0a0f] to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 sm:w-24 z-10 bg-gradient-to-r from-white dark:from-[#0a0a0f] to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 sm:w-24 z-10 bg-gradient-to-l from-white dark:from-[#0a0a0f] to-transparent" />
 
       <motion.div
         ref={trackRef}
-        className="flex items-center gap-8 sm:gap-14 w-max"
+        className="flex items-center gap-6 sm:gap-10 lg:gap-14 w-max"
         animate={{ x: ["0%", "-50%"] }}
         transition={{ x: { duration: 25, repeat: Infinity, ease: "linear" } }}
       >
         {marqueeLogos.map((name, i) => (
-          <div key={`${name}-${i}`} data-logo className="flex-shrink-0 flex items-center justify-center h-10 px-2">
-            <span className="text-sm sm:text-base font-semibold text-slate-400 dark:text-slate-600 whitespace-nowrap transition-all duration-300">
+          <div key={`${name}-${i}`} data-logo className="flex-shrink-0 flex items-center justify-center h-8 sm:h-10 px-1">
+            <span className="text-xs sm:text-sm lg:text-base font-semibold text-slate-400 dark:text-slate-600 whitespace-nowrap transition-all duration-300">
               {name}
             </span>
           </div>
@@ -95,29 +95,31 @@ function LogoMarquee() {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-screen flex flex-col justify-center pt-16">
+    <section className="relative overflow-hidden min-h-[100svh] flex flex-col justify-center px-4 sm:px-0 pt-20 pb-8 sm:pt-16 sm:pb-0">
+      {/* Background - sized for viewport */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 dark:from-blue-950/20 to-white dark:to-transparent" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-blue-100/40 dark:bg-blue-900/20 blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[300px] w-[400px] sm:h-[500px] sm:w-[700px] lg:h-[600px] lg:w-[900px] rounded-full bg-blue-100/40 dark:bg-blue-900/20 blur-3xl" />
       </div>
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center"
+        className="mx-auto w-full max-w-7xl sm:px-6 lg:px-8 text-center"
       >
         <motion.h1
           variants={fadeUp}
-          className="mx-auto max-w-4xl text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl md:text-6xl lg:text-7xl"
+          className="mx-auto max-w-4xl text-3xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.15] sm:text-5xl sm:leading-tight md:text-6xl lg:text-7xl"
         >
-          Scale your business with{" "}
-          <span className="text-blue-600 dark:text-blue-400">Colossal Hub</span>
+          Scale your business{" "}
+          <br className="hidden sm:block" />
+          with <span className="text-blue-600 dark:text-blue-400">Colossal Hub</span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
-          className="mx-auto mt-6 max-w-2xl text-lg text-slate-600 dark:text-slate-400 leading-8"
+          className="mx-auto mt-4 sm:mt-6 max-w-2xl text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-7 sm:leading-8"
         >
           The all-in-one platform that helps you manage analytics, automate
           workflows, and collaborate with your team — so you can focus on what
@@ -126,19 +128,19 @@ export default function Hero() {
 
         <motion.div
           variants={fadeUp}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
         >
-          <a href="#" className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-blue-700 hover:shadow-lg transition-all">
+          <a href="#" className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-blue-700 hover:shadow-lg transition-all">
             Get started free
           </a>
-          <a href="#" className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+          <a href="#" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
             <Play className="h-4 w-4 fill-slate-600 dark:fill-slate-300 text-slate-600 dark:text-slate-300" />
             Watch demo
           </a>
         </motion.div>
 
-        <motion.div variants={fadeUp} className="mt-12 sm:mt-20">
-          <p className="text-sm font-medium text-slate-500 dark:text-slate-500 mb-8">
+        <motion.div variants={fadeUp} className="mt-10 sm:mt-16 lg:mt-20">
+          <p className="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-500 mb-5 sm:mb-8">
             Trusted by 1,000+ companies worldwide
           </p>
           <LogoMarquee />

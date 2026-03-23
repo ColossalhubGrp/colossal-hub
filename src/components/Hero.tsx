@@ -84,12 +84,12 @@ function LogoMarquee() {
   return (
     <div ref={containerRef} className="relative w-full overflow-hidden">
       {/* Fade edges */}
-      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-white to-transparent" />
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-white to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-24 z-10 bg-gradient-to-r from-white to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-24 z-10 bg-gradient-to-l from-white to-transparent" />
 
       <motion.div
         ref={trackRef}
-        className="flex items-center gap-14 w-max"
+        className="flex items-center gap-8 sm:gap-14 w-max"
         animate={{ x: ["0%", "-50%"] }}
         transition={{
           x: {
@@ -105,7 +105,7 @@ function LogoMarquee() {
             data-logo
             className="flex-shrink-0 flex items-center justify-center h-10 px-2"
           >
-            <span className="text-base font-semibold text-slate-400 whitespace-nowrap transition-all duration-300">
+            <span className="text-sm sm:text-base font-semibold text-slate-400 whitespace-nowrap transition-all duration-300">
               {name}
             </span>
           </div>
@@ -132,7 +132,7 @@ export default function Hero() {
       >
         <motion.h1
           variants={fadeUp}
-          className="mx-auto max-w-4xl text-5xl font-bold tracking-tight text-slate-900 sm:text-7xl"
+          className="mx-auto max-w-4xl text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl"
         >
           Scale your business with{" "}
           <span className="text-blue-600">Colossal Hub</span>
@@ -166,7 +166,7 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        <motion.div variants={fadeUp} className="mt-20">
+        <motion.div variants={fadeUp} className="mt-12 sm:mt-20">
           <p className="text-sm font-medium text-slate-500 mb-8">
             Trusted by 1,000+ companies worldwide
           </p>

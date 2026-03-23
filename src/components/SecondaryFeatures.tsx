@@ -79,13 +79,13 @@ export default function SecondaryFeatures() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-16 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
           {features.map((feature) => (
             <motion.div
               key={feature.title}
               variants={fadeUp}
-              className="group relative rounded-2xl border border-slate-200 bg-white p-8 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50 transition-all duration-300"
+              className="group relative rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-50 transition-all duration-300"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-100 transition-colors">
                 <feature.icon className="h-6 w-6" />

@@ -88,15 +88,15 @@ export default function Pricing() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mt-16 grid gap-8 lg:grid-cols-3"
+          className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {plans.map((plan) => (
             <motion.div
               key={plan.name}
               variants={fadeUp}
-              className={`relative rounded-2xl p-8 ${
+              className={`relative rounded-2xl p-6 sm:p-8 ${
                 plan.featured
-                  ? "bg-blue-600 ring-2 ring-blue-500 shadow-2xl shadow-blue-500/20 scale-105"
+                  ? "bg-blue-600 ring-2 ring-blue-500 shadow-2xl shadow-blue-500/20 md:col-span-2 lg:col-span-1 lg:scale-105"
                   : "bg-slate-800 border border-slate-700"
               }`}
             >

@@ -136,10 +136,10 @@ export default function PrimaryFeatures() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.3 }}
-              className="grid lg:grid-cols-2 gap-12 items-center"
+              className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center"
             >
               {/* Left - Text */}
-              <div className="order-2 lg:order-1">
+              <div className="order-2 md:order-1">
                 <div
                   className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${active.color} px-3 py-1 text-xs font-semibold text-white`}
                 >
@@ -169,7 +169,7 @@ export default function PrimaryFeatures() {
               </div>
 
               {/* Right - Mockup */}
-              <div className="order-1 lg:order-2">
+              <div className="order-1 md:order-2">
                 <div
                   className={`relative rounded-2xl bg-gradient-to-br ${active.mockup.bg} border border-white/10 p-6 sm:p-8 backdrop-blur-sm`}
                 >

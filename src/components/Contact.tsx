@@ -28,7 +28,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 sm:py-32 bg-slate-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Left - Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export default function Contact() {
           >
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="rounded-2xl bg-white border border-slate-200 p-8 shadow-sm"
+              className="rounded-2xl bg-white border border-slate-200 p-6 sm:p-8 shadow-sm"
             >
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>

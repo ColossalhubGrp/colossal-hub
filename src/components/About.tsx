@@ -48,7 +48,7 @@ export default function About() {
     <section id="about" className="py-20 sm:py-32 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Intro */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export default function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-12 sm:mt-20 grid gap-8 grid-cols-2 md:grid-cols-4"
         >
           {values.map((v) => (
             <motion.div

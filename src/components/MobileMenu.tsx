@@ -28,11 +28,7 @@ interface MobileMenuProps {
   navItems: NavItem[];
 }
 
-export default function MobileMenu({
-  open,
-  onClose,
-  navItems,
-}: MobileMenuProps) {
+export default function MobileMenu({ open, onClose, navItems }: MobileMenuProps) {
   const [expanded, setExpanded] = useState<string | null>(null);
 
   return (
@@ -43,7 +39,7 @@ export default function MobileMenu({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm"
+            className="fixed inset-0 z-50 bg-black/20 dark:bg-black/50 backdrop-blur-sm"
             onClick={onClose}
           />
 
@@ -52,21 +48,18 @@ export default function MobileMenu({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-sm bg-white shadow-xl overflow-y-auto"
+            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-sm bg-white dark:bg-slate-900 shadow-xl overflow-y-auto"
           >
-            <div className="flex items-center justify-between p-4 border-b border-slate-100">
+            <div className="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800">
               <div className="flex items-center gap-2">
                 <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
                   <span className="text-white font-bold text-sm">C</span>
                 </div>
-                <span className="text-lg font-semibold text-slate-900">
+                <span className="text-lg font-semibold text-slate-900 dark:text-white">
                   Colossal Hub
                 </span>
               </div>
-              <button
-                onClick={onClose}
-                className="p-2 text-slate-500 hover:text-slate-700"
-              >
+              <button onClick={onClose} className="p-2 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white">
                 <X className="h-5 w-5" />
               </button>
             </div>
@@ -78,25 +71,19 @@ export default function MobileMenu({
                     <a
                       href={item.href}
                       onClick={onClose}
-                      className="flex items-center justify-between w-full px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 rounded-lg"
+                      className="flex items-center justify-between w-full px-3 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg"
                     >
                       {item.label}
                     </a>
                   ) : (
                     <>
                       <button
-                        onClick={() =>
-                          setExpanded(
-                            expanded === item.label ? null : item.label
-                          )
-                        }
-                        className="flex items-center justify-between w-full px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 rounded-lg"
+                        onClick={() => setExpanded(expanded === item.label ? null : item.label)}
+                        className="flex items-center justify-between w-full px-3 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg"
                       >
                         {item.label}
                         <ChevronDown
-                          className={`h-4 w-4 transition-transform ${
-                            expanded === item.label ? "rotate-180" : ""
-                          }`}
+                          className={`h-4 w-4 transition-transform ${expanded === item.label ? "rotate-180" : ""}`}
                         />
                       </button>
                       <AnimatePresence>
@@ -111,7 +98,7 @@ export default function MobileMenu({
                             <div className="pl-3 py-1 space-y-3">
                               {item.columns.map((col) => (
                                 <div key={col.heading}>
-                                  <p className="px-3 text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
+                                  <p className="px-3 text-[10px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
                                     {col.heading}
                                   </p>
                                   <div className="mt-1 space-y-0.5">
@@ -119,16 +106,12 @@ export default function MobileMenu({
                                       <a
                                         key={sub.title}
                                         href="#"
-                                        className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50"
+                                        className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
                                       >
-                                        <sub.icon className="h-4 w-4 text-blue-600" />
+                                        <sub.icon className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                                         <div>
-                                          <p className="text-sm font-medium text-slate-700">
-                                            {sub.title}
-                                          </p>
-                                          <p className="text-xs text-slate-500">
-                                            {sub.desc}
-                                          </p>
+                                          <p className="text-sm font-medium text-slate-700 dark:text-slate-200">{sub.title}</p>
+                                          <p className="text-xs text-slate-500 dark:text-slate-400">{sub.desc}</p>
                                         </div>
                                       </a>
                                     ))}
@@ -145,17 +128,11 @@ export default function MobileMenu({
               ))}
             </div>
 
-            <div className="p-4 border-t border-slate-100 space-y-3">
-              <a
-                href="#"
-                className="block w-full text-center px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 rounded-lg"
-              >
+            <div className="p-4 border-t border-slate-100 dark:border-slate-800 space-y-3">
+              <a href="#" className="block w-full text-center px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">
                 Sign in
               </a>
-              <a
-                href="#"
-                className="flex items-center justify-center w-full px-4 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-full transition-colors"
-              >
+              <a href="#" className="flex items-center justify-center w-full px-4 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-full transition-colors">
                 Start now
                 <ChevronRight className="ml-1 h-3.5 w-3.5" />
               </a>

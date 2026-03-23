@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:stripe.com)",
+      "WebFetch(domain:salient.tailwindui.com)",
+      "WebFetch(domain:21st.dev)",
+      "Bash(npm -v)",
+      "Bash(npx --version)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-git --import-alias \"@/*\" --use-npm)",
+      "Bash(printf \"N\\\\nN\\\\n\")",
+      "Bash(yes \"N\")"
+    ]
+  }
+}

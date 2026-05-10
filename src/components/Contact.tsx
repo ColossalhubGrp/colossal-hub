@@ -5,8 +5,8 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 const contactInfo = [
   { icon: Mail, title: "Email us", desc: "Our team typically responds within 2 hours.", value: "hello@colossalhub.com" },
-  { icon: Phone, title: "Call us", desc: "Mon\u2013Fri from 8am to 6pm EST.", value: "+1 (555) 000-0000" },
-  { icon: MapPin, title: "Visit us", desc: "Come say hello at our HQ.", value: "100 Market St, San Francisco, CA" },
+  { icon: Phone, title: "Call us", desc: "Mon\u2013Fri from 8am to 5pm CAT.", value: "+263 712 123 039" },
+  { icon: MapPin, title: "Visit us", desc: "Come say hello at our office.", value: "First Floor, Batanai Gardens, Cnr First & Jason Moyo" },
 ];
 
 export default function Contact() {

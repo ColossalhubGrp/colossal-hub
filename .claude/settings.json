@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\HP\\\\Desktop\\\\colossal\" -Recurse -Name)",
+      "Bash(Select-Object -First 30)"
+    ]
+  }
+}

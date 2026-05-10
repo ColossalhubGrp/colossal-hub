@@ -17,7 +17,12 @@ export default function Footer() {
               </div>
               <span className="text-lg font-semibold text-white">Colossal Hub</span>
             </a>
-            <p className="mt-4 text-sm text-slate-400 leading-6">The all-in-one platform for modern teams to scale faster.</p>
+            <p className="mt-4 text-sm text-slate-400 leading-6">Empowering Growth — intelligent recruitment software for growing businesses.</p>
+            <div className="mt-5 space-y-1.5 text-sm text-slate-400">
+              <p>+263 712 123 039</p>
+              <p>First Floor, Batanai Gardens</p>
+              <p>Cnr First &amp; Jason Moyo</p>
+            </div>
             <div className="mt-6 flex gap-4">
               <a href="#" className="text-slate-400 hover:text-white transition-colors" aria-label="Twitter">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>

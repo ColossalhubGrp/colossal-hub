@@ -2,78 +2,78 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BarChart3, Users, Zap, Puzzle } from "lucide-react";
+import { FileText, Sparkles, Video, BarChart3 } from "lucide-react";
 
 const features = [
   {
-    id: "analytics",
-    icon: BarChart3,
-    title: "Analytics Dashboard",
-    subtitle: "Track every metric in real-time",
+    id: "post-job",
+    icon: FileText,
+    title: "Post your job",
+    subtitle: "Step 1",
     description:
-      "Get a complete view of your business performance with customizable dashboards, real-time data streams, and AI-powered insights that help you make smarter decisions faster.",
+      "Create and publish job openings quickly from one dashboard. Give your hiring team a clear, organised way to launch and track recruitment activity without unnecessary admin work.",
     color: "from-blue-600 to-indigo-600",
     mockup: {
       bg: "from-blue-500/20 to-indigo-500/20",
       accent: "bg-blue-500",
       items: [
-        { label: "Revenue", value: "$48.2K", change: "+12.5%" },
-        { label: "Users", value: "2,847", change: "+8.2%" },
-        { label: "Conversion", value: "3.6%", change: "+2.1%" },
+        { label: "Open Roles", value: "12", change: "+3 this week" },
+        { label: "Applications", value: "284", change: "+47 today" },
+        { label: "Time to Post", value: "3 min", change: "avg" },
       ],
     },
   },
   {
-    id: "collaboration",
-    icon: Users,
-    title: "Team Collaboration",
-    subtitle: "Work together, seamlessly",
+    id: "ai-shortlist",
+    icon: Sparkles,
+    title: "Let AI shortlist candidates",
+    subtitle: "Step 2",
     description:
-      "Shared workspaces, real-time editing, comments, and mentions keep your entire team aligned. No more endless email chains or lost context between handoffs.",
+      "Automatically identify the most relevant applicants based on your hiring criteria. Spend less time manually screening and more time speaking with the right people.",
     color: "from-emerald-600 to-teal-600",
     mockup: {
       bg: "from-emerald-500/20 to-teal-500/20",
       accent: "bg-emerald-500",
       items: [
-        { label: "Active Projects", value: "24", change: "" },
-        { label: "Team Members", value: "86", change: "" },
-        { label: "Tasks Done", value: "1,240", change: "" },
+        { label: "Screened", value: "1,420", change: "automated" },
+        { label: "Top Matches", value: "38", change: "high fit" },
+        { label: "Time Saved", value: "18 hrs", change: "/role" },
       ],
     },
   },
   {
-    id: "automation",
-    icon: Zap,
-    title: "Automation",
-    subtitle: "Automate repetitive workflows",
+    id: "ai-interview",
+    icon: Video,
+    title: "Let AI interview candidates",
+    subtitle: "Step 3",
     description:
-      "Build powerful automation pipelines with our visual workflow builder. Trigger actions based on events, schedule recurring tasks, and eliminate manual busywork across your organization.",
+      "Let AI run structured video interviews and then evaluate recommended candidates faster with your team. Move promising applicants through the funnel without scheduling chaos.",
     color: "from-amber-500 to-orange-600",
     mockup: {
       bg: "from-amber-500/20 to-orange-500/20",
       accent: "bg-amber-500",
       items: [
-        { label: "Workflows", value: "156", change: "" },
-        { label: "Time Saved", value: "42hrs", change: "/week" },
-        { label: "Automations", value: "890", change: "" },
+        { label: "Interviews", value: "96", change: "completed" },
+        { label: "Avg. Score", value: "8.4", change: "/10" },
+        { label: "Scheduling", value: "0 min", change: "no friction" },
       ],
     },
   },
   {
-    id: "integrations",
-    icon: Puzzle,
-    title: "Integrations",
-    subtitle: "Connect with 100+ tools",
+    id: "insights",
+    icon: BarChart3,
+    title: "Read the insights and analytics",
+    subtitle: "Step 4",
     description:
-      "Seamlessly connect Colossal Hub with the tools you already use. From Slack to Salesforce, GitHub to Google Workspace — your data flows where it needs to go.",
+      "See your detailed reviews per candidate, cost per recruitment stage, track completion rates, identify drop-offs, and monitor your entire hiring funnel in real-time. Every metric recruiters need, in one dashboard.",
     color: "from-purple-600 to-pink-600",
     mockup: {
       bg: "from-purple-500/20 to-pink-500/20",
       accent: "bg-purple-500",
       items: [
-        { label: "Connected", value: "32", change: "apps" },
-        { label: "Data Synced", value: "1.2M", change: "records" },
-        { label: "Uptime", value: "99.9%", change: "" },
+        { label: "Cost / Hire", value: "$412", change: "-22%" },
+        { label: "Completion", value: "87%", change: "+9%" },
+        { label: "Top Drop-off", value: "Stage 3", change: "flagged" },
       ],
     },
   },
@@ -84,7 +84,7 @@ export default function PrimaryFeatures() {
   const active = features[activeTab];
 
   return (
-    <section id="features" className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-20 sm:py-32">
+    <section id="how-it-works" className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-20 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,12 +93,15 @@ export default function PrimaryFeatures() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Everything you need to scale
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-400">
+            How it works
+          </p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            A simpler way to hire in 3 steps
           </h2>
           <p className="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">
-            Powerful features designed to help your team move faster, work
-            smarter, and deliver results that matter.
+            From posting a role to making the offer — Colossal Hub guides every
+            stage of recruitment with AI doing the heavy lifting.
           </p>
         </motion.div>
 
@@ -122,7 +125,7 @@ export default function PrimaryFeatures() {
             >
               <feature.icon className="h-4 w-4" />
               <span className="hidden sm:inline">{feature.title}</span>
-              <span className="sm:hidden">{feature.title.split(" ")[0]}</span>
+              <span className="sm:hidden">{feature.subtitle}</span>
             </button>
           ))}
         </motion.div>
@@ -152,18 +155,18 @@ export default function PrimaryFeatures() {
                 <p className="mt-4 text-base text-slate-400 leading-7">
                   {active.description}
                 </p>
-                <div className="mt-8 flex gap-4">
+                <div className="mt-8 flex flex-wrap gap-4">
                   <a
                     href="#"
                     className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
                   >
-                    Learn more
+                    Start Hiring Smarter
                   </a>
                   <a
                     href="#"
                     className="inline-flex items-center justify-center rounded-full border border-slate-600 px-5 py-2.5 text-sm font-semibold text-slate-300 hover:border-slate-500 hover:text-white transition-colors"
                   >
-                    View docs
+                    Book Demo
                   </a>
                 </div>
               </div>

@@ -3,15 +3,11 @@
 import { motion } from "framer-motion";
 
 const faqs = [
-  { question: "How does the free trial work?", answer: "You get full access to all Professional features for 14 days. No credit card required. At the end of your trial, choose a plan or downgrade to free." },
-  { question: "Can I change plans later?", answer: "Absolutely. Upgrade or downgrade at any time. Changes take effect immediately, and we'll prorate any billing differences." },
-  { question: "What integrations do you support?", answer: "We support 100+ integrations including Slack, Salesforce, HubSpot, GitHub, Google Workspace, Jira, and many more. Custom integrations are available on Enterprise." },
-  { question: "Is my data secure?", answer: "Yes. We use AES-256 encryption at rest and TLS 1.3 in transit. We're SOC 2 Type II certified and GDPR compliant. Your data is backed up across multiple regions." },
-  { question: "Do you offer custom contracts?", answer: "Yes, our Enterprise plan includes custom contracts, SLAs, and dedicated support. Contact our sales team to discuss your specific requirements." },
-  { question: "What kind of support do you offer?", answer: "Starter plans include email support. Professional plans get priority support with 4-hour response times. Enterprise includes 24/7 dedicated support." },
-  { question: "Can I export my data?", answer: "Yes, you can export all your data at any time in CSV, JSON, or Excel format. We believe your data belongs to you." },
-  { question: "How does team billing work?", answer: "You're billed per seat on your plan. Add or remove team members anytime and billing adjusts automatically." },
-  { question: "Do you offer discounts for nonprofits?", answer: "Yes! We offer 50% off for verified nonprofit organizations. Contact our sales team with your organization's details." },
+  { question: "How does the AI shortlisting work?", answer: "Our system helps identify applicants that best match your hiring standards, so your team can review the most relevant candidates first." },
+  { question: "Can multiple team members collaborate on hiring?", answer: "Yes. Recruiters and hiring managers can work together in one shared recruitment workflow." },
+  { question: "Do candidates need to install anything for video interviews?", answer: "No. Everything is done online on the platform." },
+  { question: "How quickly can we get started?", answer: "Just sign in, buy credits and start recruiting." },
+  { question: "Can Colossal Hub support growing companies?", answer: "Yes. The platform is designed to help teams streamline hiring as recruitment demand increases." },
 ];
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.05 } } };

@@ -11,10 +11,7 @@ import {
   Users,
   Globe,
   Shield,
-  Code,
-  BookOpen,
   Headphones,
-  Layers,
   Workflow,
   Puzzle,
   LineChart,
@@ -28,9 +25,6 @@ import {
   Rocket,
   Database,
   Cloud,
-  Lock,
-  Terminal,
-  Blocks,
   Cpu,
   Video,
   MessageSquare,
@@ -93,32 +87,6 @@ const navItems = [
       title: "Customer stories",
       desc: "See how TechFlow reduced reporting time by 60% with Colossal Hub.",
       cta: "Read case study",
-    },
-  },
-  {
-    label: "Developers",
-    columns: [
-      {
-        heading: "Documentation",
-        items: [
-          { icon: Code, title: "API Reference", desc: "Complete REST & GraphQL docs" },
-          { icon: BookOpen, title: "Guides", desc: "Step-by-step tutorials" },
-          { icon: Terminal, title: "CLI Tools", desc: "Manage projects from the terminal" },
-        ],
-      },
-      {
-        heading: "Tools & SDKs",
-        items: [
-          { icon: Layers, title: "SDKs", desc: "Libraries for JS, Python, Go & more" },
-          { icon: Blocks, title: "Plugins", desc: "Extend with custom plugins" },
-          { icon: Lock, title: "Auth & OAuth", desc: "Secure authentication flows" },
-        ],
-      },
-    ],
-    featured: {
-      title: "Developer hub",
-      desc: "Explore sample apps, starter templates, and community-built integrations.",
-      cta: "Visit hub",
     },
   },
   {
@@ -243,13 +211,13 @@ export default function Header() {
                 href="#"
                 className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
               >
-                Sign in
+                Login
               </a>
               <a
                 href="#"
                 className="inline-flex items-center justify-center rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition-colors shadow-sm"
               >
-                Start now
+                Book Demo
                 <ChevronRight className="ml-1 h-3.5 w-3.5" />
               </a>
             </div>

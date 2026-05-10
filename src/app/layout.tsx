@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Colossal Hub - Scale Your Business",
+  title: "Colossal Hub — AI-powered recruitment",
   description:
-    "The all-in-one platform that helps businesses scale faster with powerful analytics, automation, and collaboration tools.",
+    "Hire faster with AI-powered recruitment. Post jobs, automatically shortlist top candidates, and run structured video interviews from one intelligent platform.",
 };
 
 export default function RootLayout({

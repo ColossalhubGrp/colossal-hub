@@ -130,10 +130,10 @@ export default function MobileMenu({ open, onClose, navItems }: MobileMenuProps)
 
             <div className="p-4 border-t border-slate-100 dark:border-slate-800 space-y-3">
               <a href="#" className="block w-full text-center px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">
-                Sign in
+                Login
               </a>
               <a href="#" className="flex items-center justify-center w-full px-4 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-full transition-colors">
-                Start now
+                Book Demo
                 <ChevronRight className="ml-1 h-3.5 w-3.5" />
               </a>
             </div>

@@ -108,22 +108,29 @@ export default function Hero() {
         animate="show"
         className="mx-auto w-full max-w-7xl sm:px-6 lg:px-8 text-center"
       >
+        <motion.div variants={fadeUp} className="flex justify-center">
+          <span className="inline-flex items-center rounded-full border border-blue-200 dark:border-blue-900/60 bg-blue-50 dark:bg-blue-950/40 px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300">
+            AI recruitment software for growing businesses
+          </span>
+        </motion.div>
+
         <motion.h1
           variants={fadeUp}
-          className="mx-auto max-w-4xl text-3xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.15] sm:text-5xl sm:leading-tight md:text-6xl lg:text-7xl"
+          className="mx-auto mt-5 max-w-4xl text-3xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.15] sm:text-5xl sm:leading-tight md:text-6xl lg:text-7xl"
         >
-          Scale your business{" "}
+          Hire faster with{" "}
           <br className="hidden sm:block" />
-          with <span className="text-blue-600 dark:text-blue-400">Colossal Hub</span>
+          <span className="text-blue-600 dark:text-blue-400">AI-powered recruitment</span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="mx-auto mt-4 sm:mt-6 max-w-2xl text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-7 sm:leading-8"
         >
-          The all-in-one platform that helps you manage analytics, automate
-          workflows, and collaborate with your team — so you can focus on what
-          matters most: growing your business.
+          Post jobs, automatically shortlist top candidates, and run structured
+          video interviews from one intelligent platform. Colossal Hub helps
+          your team reduce manual hiring work, move faster, and make better
+          hiring decisions.
         </motion.p>
 
         <motion.div
@@ -131,11 +138,11 @@ export default function Hero() {
           className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
         >
           <a href="#" className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-blue-700 hover:shadow-lg transition-all">
-            Get started free
+            Start Hiring Smarter
           </a>
-          <a href="#" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+          <a href="#how-it-works" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
             <Play className="h-4 w-4 fill-slate-600 dark:fill-slate-300 text-slate-600 dark:text-slate-300" />
-            Watch demo
+            See How It Works
           </a>
         </motion.div>
 

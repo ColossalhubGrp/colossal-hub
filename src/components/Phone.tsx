@@ -30,7 +30,20 @@ export default function Phone({
       <div className="rounded-[2.25rem] border border-slate-300 dark:border-slate-700 bg-slate-900 p-2 shadow-[0_24px_48px_-24px_rgba(15,23,42,0.45)]">
         <div className="overflow-hidden rounded-[1.75rem] bg-[#efeae2] dark:bg-[#0b141a]">
           <div className="flex items-center gap-3 bg-slate-900 px-4 pb-3 pt-5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">C</div>
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4"
+                aria-hidden
+              >
+                <path d="M19 6.5A8.5 8.5 0 1 0 19 17.5" />
+              </svg>
+            </div>
             <div className="leading-tight">
               <p className="text-sm font-semibold text-white">{title}</p>
               <p className="text-[11px] text-slate-400">{subtitle}</p>

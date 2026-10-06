@@ -11,7 +11,27 @@ import { loginUrl, navLinks, products, site } from "@/lib/site";
 export function Logo({ inverse = false }: { inverse?: boolean }) {
   return (
     <Link href="/" className="flex items-center gap-2">
-      <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">C</span>
+      {/* Open-C arc mark — shared with the HR app's brand mark
+          (smart_hr_web app/icon.svg) and the favicon this site now
+          ships. SVG so it stays crisp at every size and inlines
+          without an asset round-trip. */}
+      <span
+        className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white"
+        aria-label={site.name}
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-5 w-5"
+          aria-hidden
+        >
+          <path d="M19 6.5A8.5 8.5 0 1 0 19 17.5" />
+        </svg>
+      </span>
       <span className={`text-lg font-semibold ${inverse ? "text-white" : "text-slate-900 dark:text-white"}`}>
         {site.name}
       </span>

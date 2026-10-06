@@ -59,7 +59,7 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
             </div>
 
             <div className="mt-auto space-y-2 border-t border-slate-200 dark:border-slate-800 p-4">
-              <a href={loginUrl} onClick={onClose} className="block rounded-md border border-slate-300 dark:border-slate-700 py-2.5 text-center text-sm font-medium text-slate-800 dark:text-slate-100">
+              <a href={loginUrl} target="_blank" rel="noopener noreferrer" onClick={onClose} className="block rounded-md border border-slate-300 dark:border-slate-700 py-2.5 text-center text-sm font-medium text-slate-800 dark:text-slate-100">
                 Log in
               </a>
               <Link href="/demo" onClick={onClose} className="block rounded-md bg-blue-600 py-2.5 text-center text-sm font-semibold text-white hover:bg-blue-700">

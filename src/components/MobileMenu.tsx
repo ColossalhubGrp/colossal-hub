@@ -1,36 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronDown, ChevronRight } from "lucide-react";
+import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
+import { X } from "lucide-react";
+import { loginUrl, navLinks, products, site } from "@/lib/site";
 
-interface NavSubItem {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  desc: string;
-}
-
-interface NavColumn {
-  heading: string;
-  items: NavSubItem[];
-}
-
-interface NavItem {
-  label: string;
-  href?: string;
-  columns?: NavColumn[];
-  featured?: { title: string; desc: string; cta: string; badge?: string };
-}
-
-interface MobileMenuProps {
-  open: boolean;
-  onClose: () => void;
-  navItems: NavItem[];
-}
-
-export default function MobileMenu({ open, onClose, navItems }: MobileMenuProps) {
-  const [expanded, setExpanded] = useState<string | null>(null);
-
+export default function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
     <AnimatePresence>
       {open && (
@@ -39,103 +14,57 @@ export default function MobileMenu({ open, onClose, navItems }: MobileMenuProps)
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/20 dark:bg-black/50 backdrop-blur-sm"
+            className="fixed inset-0 z-50 bg-slate-900/30 dark:bg-black/60"
             onClick={onClose}
           />
-
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-sm bg-white dark:bg-slate-900 shadow-xl overflow-y-auto"
+            transition={{ type: "tween", duration: 0.22, ease: "easeOut" }}
+            className="fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col overflow-y-auto bg-white dark:bg-slate-900"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu"
           >
-            <div className="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800">
-              <div className="flex items-center gap-2">
-                <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">C</span>
-                </div>
-                <span className="text-lg font-semibold text-slate-900 dark:text-white">
-                  Colossal Hub
-                </span>
-              </div>
-              <button onClick={onClose} className="p-2 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white">
+            <div className="flex h-16 items-center justify-between border-b border-slate-200 dark:border-slate-800 px-4">
+              <span className="text-lg font-semibold text-slate-900 dark:text-white">{site.name}</span>
+              <button onClick={onClose} className="rounded-md p-2 text-slate-500 dark:text-slate-400" aria-label="Close menu">
                 <X className="h-5 w-5" />
               </button>
             </div>
 
-            <div className="p-4 space-y-1">
-              {navItems.map((item) => (
-                <div key={item.label}>
-                  {item.href ? (
-                    <a
-                      href={item.href}
-                      onClick={onClose}
-                      className="flex items-center justify-between w-full px-3 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg"
-                    >
-                      {item.label}
-                    </a>
-                  ) : (
-                    <>
-                      <button
-                        onClick={() => setExpanded(expanded === item.label ? null : item.label)}
-                        className="flex items-center justify-between w-full px-3 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg"
-                      >
-                        {item.label}
-                        <ChevronDown
-                          className={`h-4 w-4 transition-transform ${expanded === item.label ? "rotate-180" : ""}`}
-                        />
-                      </button>
-                      <AnimatePresence>
-                        {expanded === item.label && item.columns && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="overflow-hidden"
-                          >
-                            <div className="pl-3 py-1 space-y-3">
-                              {item.columns.map((col) => (
-                                <div key={col.heading}>
-                                  <p className="px-3 text-[10px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
-                                    {col.heading}
-                                  </p>
-                                  <div className="mt-1 space-y-0.5">
-                                    {col.items.map((sub) => (
-                                      <a
-                                        key={sub.title}
-                                        href="#"
-                                        className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
-                                      >
-                                        <sub.icon className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                                        <div>
-                                          <p className="text-sm font-medium text-slate-700 dark:text-slate-200">{sub.title}</p>
-                                          <p className="text-xs text-slate-500 dark:text-slate-400">{sub.desc}</p>
-                                        </div>
-                                      </a>
-                                    ))}
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </>
-                  )}
-                </div>
-              ))}
+            <div className="px-4 py-5">
+              <p className="px-2 text-xs font-medium text-slate-500 dark:text-slate-400">Products</p>
+              <ul className="mt-2">
+                {products.map((p) => (
+                  <li key={p.href}>
+                    <Link href={p.href} onClick={onClose} className="flex items-center justify-between rounded-md px-2 py-2.5 text-[15px] font-medium text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800">
+                      {p.name}
+                      {p.soon && <span className="text-xs font-normal text-slate-500 dark:text-slate-400">Coming soon</span>}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <ul className="mt-4 border-t border-slate-200 dark:border-slate-800 pt-4">
+                {navLinks.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} onClick={onClose} className="block rounded-md px-2 py-2.5 text-[15px] font-medium text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="p-4 border-t border-slate-100 dark:border-slate-800 space-y-3">
-              <a href="#" className="block w-full text-center px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">
-                Login
+            <div className="mt-auto space-y-2 border-t border-slate-200 dark:border-slate-800 p-4">
+              <a href={loginUrl} onClick={onClose} className="block rounded-md border border-slate-300 dark:border-slate-700 py-2.5 text-center text-sm font-medium text-slate-800 dark:text-slate-100">
+                Log in
               </a>
-              <a href="#" className="flex items-center justify-center w-full px-4 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-full transition-colors">
-                Book Demo
-                <ChevronRight className="ml-1 h-3.5 w-3.5" />
-              </a>
+              <Link href="/demo" onClick={onClose} className="block rounded-md bg-blue-600 py-2.5 text-center text-sm font-semibold text-white hover:bg-blue-700">
+                Book a demo
+              </Link>
             </div>
           </motion.div>
         </>

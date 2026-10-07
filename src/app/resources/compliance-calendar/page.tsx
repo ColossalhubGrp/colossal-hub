@@ -3,6 +3,8 @@ import LeadForm from "@/components/LeadForm";
 import { Container, PageIntro, Tbc } from "@/components/ui";
 
 export const metadata: Metadata = {
+  // Hidden for now: not linked from the site and kept out of search results.
+  robots: { index: false, follow: false },
   title: "Statutory compliance calendar for Zimbabwe",
   description:
     "Every PAYE, NSSA, levy and council deadline for the year on one page. Free, no account needed, with WhatsApp reminders.",

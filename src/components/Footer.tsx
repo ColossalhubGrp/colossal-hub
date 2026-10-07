@@ -21,8 +21,6 @@ const columns = [
     links: [
       { label: "Pricing", href: "/pricing" },
       { label: "Book a demo", href: "/demo" },
-      { label: "Compliance calendar", href: "/resources/compliance-calendar" },
-      { label: "Resources", href: "/resources" },
       { label: "Join the Accounting waiting list", href: "/accounting#waiting-list" },
     ],
   },
@@ -77,7 +75,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-slate-800 pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p className="leading-6">
-            &copy; {new Date().getFullYear()} {site.legalName}. Registered in Zimbabwe, company no. {site.companyNumber}.
+            &copy; {new Date().getFullYear()} {site.legalName}.
             <br className="hidden sm:block" /> {site.address.join(", ")}.
           </p>
           <p className="font-medium text-slate-300">{site.tagline}</p>

@@ -45,7 +45,6 @@ export const navLinks = [
   { label: "Why Colossal", href: "/why" },
   { label: "Partners", href: "/partners" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
 ];
 

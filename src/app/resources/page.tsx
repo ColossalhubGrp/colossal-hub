@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { Container, PageIntro, Tbc } from "@/components/ui";
 
 export const metadata: Metadata = {
+  // Hidden for now: not linked from the site and kept out of search results.
+  robots: { index: false, follow: false },
   title: "Resources",
   description: "Guides, the statutory compliance calendar and articles from Colossal Hub.",
 };

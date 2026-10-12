@@ -3,7 +3,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --font-sans: var(--font-inter);
+  /* Tailwind-recommended v4 pairing (what tailwindcss.com itself
+   * uses in its own docs): Inter for sans, IBM Plex Mono for mono.
+   * Both self-hosted via next/font/google in app/layout.tsx and
+   * exposed as --font-inter / --font-ibm-plex-mono. We re-expose
+   * them through Tailwind's own tokens so `font-sans` and
+   * `font-mono` utilities Just Work. */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
   /* ── Brand palette — matched 2026-10-12 to the official Colossal
    * Hub logo pack. Navy #203060 is the brand primary (ring +
@@ -49,9 +56,13 @@ html {
 }
 
 body {
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-sans);
   background: #ffffff;
   color: #0F172A;
+}
+
+code, kbd, pre, samp {
+  font-family: var(--font-mono);
 }
 
 .dark body {

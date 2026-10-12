@@ -32,12 +32,13 @@ export default function Hub() {
         ))}
       </svg>
 
-      {/* Central node of the product ring. Uses the inverse (white-on-navy)
-          official mark; the shadow carries a hint of the brand navy. */}
+      {/* Central node of the product ring. Uses just the circled C
+          (white-on-navy, transparent background) so it drops cleanly
+          onto the navy chip; the shadow carries a hint of the brand navy. */}
       <div className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-2xl bg-blue-600 text-white shadow-[0_20px_40px_-16px_rgba(32,48,96,0.75)] sm:h-28 sm:w-28">
         <span className="relative h-10 w-10">
           <Image
-            src="/colossal-hub-mark-inverse.png"
+            src="/colossal-hub-c-mark-inverse.png"
             alt=""
             fill
             sizes="40px"

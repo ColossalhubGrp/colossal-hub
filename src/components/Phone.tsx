@@ -33,7 +33,7 @@ export default function Phone({
           <div className="flex items-center gap-3 bg-slate-900 px-4 pb-3 pt-5">
             <span className="relative h-8 w-8 overflow-hidden rounded-full">
               <Image
-                src="/colossal-hub-mark-inverse.png"
+                src="/colossal-hub-c-mark-inverse.png"
                 alt=""
                 fill
                 sizes="32px"

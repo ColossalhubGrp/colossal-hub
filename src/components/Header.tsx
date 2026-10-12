@@ -10,15 +10,15 @@ import { useTheme } from "./ThemeProvider";
 import { loginUrl, navLinks, products, site } from "@/lib/site";
 
 export function Logo({ inverse = false }: { inverse?: boolean }) {
-  // On a dark/inverse surface we need the white-on-navy mark so the
-  // ring and C don't disappear; everywhere else the colour mark on
-  // transparent reads cleanly against the site's light hero.
-  const markSrc = inverse ? "/colossal-hub-mark-inverse.png" : "/colossal-hub-mark.png";
+  // JUST the circled C — the wordmark lives next to the chip as
+  // real HTML text (see the <span> below), so there is no reason
+  // to also bake it into the PNG where it renders as a tiny
+  // unreadable smudge at 32x32. On a dark/inverse surface the
+  // inverse (white-ring + white-C on transparent) variant keeps
+  // the mark visible.
+  const markSrc = inverse ? "/colossal-hub-c-mark-inverse.png" : "/colossal-hub-c-mark.png";
   return (
     <Link href="/" className="flex items-center gap-2">
-      {/* Official Colossal Hub brand mark (public/colossal-hub-mark*.png).
-          Rendered via next/image so it stays crisp on retina + ships
-          in the browser's own cache. */}
       <span className="relative h-8 w-8" aria-label={site.name}>
         <Image src={markSrc} alt="" fill priority sizes="32px" className="object-contain" />
       </span>

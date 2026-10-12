@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BarChart3, BookOpen, MessageCircle, UserSearch, Users, Wallet } from "lucide-react";
 
@@ -31,20 +32,18 @@ export default function Hub() {
         ))}
       </svg>
 
-      <div className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-2xl bg-blue-600 text-white shadow-[0_20px_40px_-16px_rgba(37,99,235,0.7)] sm:h-28 sm:w-28">
-        {/* Shared open-C arc — same mark used in the Header + favicon. */}
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="h-10 w-10"
-          aria-hidden
-        >
-          <path d="M19 6.5A8.5 8.5 0 1 0 19 17.5" />
-        </svg>
+      {/* Central node of the product ring. Uses the inverse (white-on-navy)
+          official mark; the shadow carries a hint of the brand navy. */}
+      <div className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-2xl bg-blue-600 text-white shadow-[0_20px_40px_-16px_rgba(32,48,96,0.75)] sm:h-28 sm:w-28">
+        <span className="relative h-10 w-10">
+          <Image
+            src="/colossal-hub-mark-inverse.png"
+            alt=""
+            fill
+            sizes="40px"
+            className="object-contain"
+          />
+        </span>
         <span className="mt-1.5 text-[10px] font-medium text-blue-100">One record</span>
       </div>
 

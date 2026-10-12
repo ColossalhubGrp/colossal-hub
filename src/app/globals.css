@@ -4,8 +4,33 @@
 
 @theme inline {
   --font-sans: var(--font-inter);
-  --color-primary: #2563EB;
-  --color-primary-dark: #1D4ED8;
+
+  /* ── Brand palette — matched 2026-10-12 to the official Colossal
+   * Hub logo pack. Navy #203060 is the brand primary (ring +
+   * wordmark); Mint #88D0B8 is the C-letter accent. */
+  --color-primary: #203060;
+  --color-primary-dark: #1A2850;
+  --color-accent-mint: #88D0B8;
+
+  /* Tailwind's own blue-* scale is REDEFINED to a navy ramp so every
+   * `bg-blue-600`, `text-blue-400`, etc. that was written for the
+   * previous blue brand automatically rebrands without touching a
+   * single component (~115 call sites across the site). Values are
+   * tuned so blue-600 lands exactly on the brand navy and the scale
+   * stays ordered light-to-dark. */
+  --color-blue-50:  #E8ECF4;
+  --color-blue-100: #D1D8E8;
+  --color-blue-200: #A3B1D1;
+  --color-blue-300: #7589B5;
+  --color-blue-400: #4F6598;
+  --color-blue-500: #334678;
+  --color-blue-600: #203060;   /* ← brand navy */
+  --color-blue-700: #1A2850;   /* ← darker (hover) */
+  --color-blue-800: #141F42;
+  --color-blue-900: #0E1733;
+  --color-blue-950: #080E22;
+
+  /* Slate neutrals — unchanged. */
   --color-slate-950: #020617;
   --color-slate-900: #0F172A;
   --color-slate-800: #1E293B;
@@ -35,12 +60,12 @@ body {
 }
 
 ::selection {
-  background: #2563EB;
+  background: #203060;
   color: #ffffff;
 }
 
 :focus-visible {
-  outline: 2px solid #2563EB;
+  outline: 2px solid #203060;
   outline-offset: 2px;
 }
 

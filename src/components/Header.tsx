@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, ChevronDown, Menu, Moon, Sun, X } from "lucide-react";
@@ -9,28 +10,17 @@ import { useTheme } from "./ThemeProvider";
 import { loginUrl, navLinks, products, site } from "@/lib/site";
 
 export function Logo({ inverse = false }: { inverse?: boolean }) {
+  // On a dark/inverse surface we need the white-on-navy mark so the
+  // ring and C don't disappear; everywhere else the colour mark on
+  // transparent reads cleanly against the site's light hero.
+  const markSrc = inverse ? "/colossal-hub-mark-inverse.png" : "/colossal-hub-mark.png";
   return (
     <Link href="/" className="flex items-center gap-2">
-      {/* Open-C arc mark — shared with the HR app's brand mark
-          (smart_hr_web app/icon.svg) and the favicon this site now
-          ships. SVG so it stays crisp at every size and inlines
-          without an asset round-trip. */}
-      <span
-        className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white"
-        aria-label={site.name}
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="h-5 w-5"
-          aria-hidden
-        >
-          <path d="M19 6.5A8.5 8.5 0 1 0 19 17.5" />
-        </svg>
+      {/* Official Colossal Hub brand mark (public/colossal-hub-mark*.png).
+          Rendered via next/image so it stays crisp on retina + ships
+          in the browser's own cache. */}
+      <span className="relative h-8 w-8" aria-label={site.name}>
+        <Image src={markSrc} alt="" fill priority sizes="32px" className="object-contain" />
       </span>
       <span className={`text-lg font-semibold ${inverse ? "text-white" : "text-slate-900 dark:text-white"}`}>
         {site.name}

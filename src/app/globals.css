@@ -74,6 +74,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ---------- Headline preview (variant 1 of the homepage mock-up) ----------
+ * Serif display on page and section headings only — body, cards, nav
+ * and buttons stay Inter. The !important overrides the Tailwind
+ * weight/tracking utilities already on the headings so this can be
+ * judged (and removed) without touching every call site. */
+h1, h2 {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+}
+
 body {
   font-family: var(--font-sans);
   background: #ffffff;

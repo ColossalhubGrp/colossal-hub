@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const roles = [
   {
     who: "Employees",
-    what: "Receive payslips. Request leave and see the balance. Clock in and out. Submit an expense with a photograph.",
+    what: "Receive payslips. Request leave and see the balance. Clock in and out. Send an expense claim with a photograph.",
   },
   {
     who: "Managers",
@@ -43,7 +43,7 @@ export default function WhatsAppPage() {
                     <br />
                     Rudo Moyo, Dispatch
                     <br />
-                    13 to 17 October · 5 days annual leave
+                    13 to 17 October — 5 days annual leave
                     <br />
                     <span className="text-slate-500 dark:text-slate-400">Two others from Dispatch are off that week.</span>
                   </>
@@ -70,7 +70,7 @@ export default function WhatsAppPage() {
 
       <section className="border-b border-slate-200 dark:border-slate-800">
         <Container className="py-16 sm:py-20">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Who does what</h2>
+          <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-3xl">Who does what</h2>
           <div className="mt-10 grid border-t border-slate-200 dark:border-slate-800 md:grid-cols-3">
             {roles.map((r) => (
               <div key={r.who} className="border-b border-slate-200 dark:border-slate-800 py-6 md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0 md:last:pr-0">
@@ -83,6 +83,31 @@ export default function WhatsAppPage() {
             Nothing to install. No password. Works on the phone your team already carries, on the data bundle they
             already have.
           </p>
+        </Container>
+      </section>
+
+      <section className="border-b border-slate-200 dark:border-slate-800">
+        <Container className="grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-3xl">
+              Photograph a receipt. It is read, and posted where it belongs.
+            </h2>
+            <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-400">
+              Send a photo of a receipt on WhatsApp and Colossal Hub reads the supplier, the amount and the date, shows
+              you what it read, and asks one question: supplier invoice or expense claim? If a figure is wrong, reply
+              with the correct one. The entry lands in your books as a draft for review — nothing posts itself.
+            </p>
+          </div>
+          <Phone
+            subtitle="business account"
+            caption="A real thread from the live system."
+            image={{
+              src: "/screens/whatsapp-receipt.png",
+              width: 266,
+              height: 242,
+              alt: "A real WhatsApp thread: Colossal Hub has read a photographed receipt — supplier, total, date and reference — and asks whether to post it as a supplier invoice or an expense claim.",
+            }}
+          />
         </Container>
       </section>
 

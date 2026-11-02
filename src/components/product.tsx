@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { Container, Split, TextLink } from "./ui";
 
 /** "The problem in three lines" block on product pages. */
@@ -51,7 +50,6 @@ export function WorksWith({ items }: { items: { name: string; href: string; how:
                 </span>
                 <span className="mt-1 block leading-7 text-slate-600 dark:text-slate-400">{item.how}</span>
               </span>
-              <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-slate-400 transition-transform group-hover:translate-x-1" />
             </Link>
           </li>
         ))}

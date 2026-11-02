@@ -34,21 +34,21 @@ export default function HrPage() {
                     <span className="mb-1 block rounded bg-slate-900/10 dark:bg-white/10 px-2 py-4 text-center text-[11px] text-slate-600 dark:text-slate-300">
                       receipt.jpg
                     </span>
-                    Fuel for the delivery van, USD 35
+                    Fuel for the delivery van, US$35
                   </>
                 ),
               },
               {
                 from: "them",
                 time: "12:31",
-                text: "Expense claim for USD 35 (Fuel) submitted. Sent to Chipo for approval.",
+                text: "Expense claim for US$35 (Fuel) submitted. Sent to Chipo for approval.",
               },
             ]}
           />
         }
       >
         <p>
-          Records, recruitment, contracts, leave, attendance, performance and the whole employee journey. On a screen
+          Records, recruitment, contracts, leave, attendance and performance — from the day someone is hired to the day they leave. On a screen
           for your HR team, and on WhatsApp for your staff.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -131,7 +131,7 @@ export default function HrPage() {
       >
         <DefinitionList
           items={[
-            { term: "Employees", detail: "Receive payslips. Request leave and see the balance. Clock in and out. Submit an expense with a photograph." },
+            { term: "Employees", detail: "Receive payslips. Request leave and see the balance. Clock in and out. Send an expense claim with a photograph." },
             { term: "Managers", detail: "Approve leave and expenses. See who is in today. Get told when something needs them." },
           ]}
         />

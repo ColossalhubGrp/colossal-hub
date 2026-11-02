@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight, ChevronDown, Menu, Moon, Sun, X } from "lucide-react";
+import { ChevronDown, Menu, Moon, Sun, X } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 import { useTheme } from "./ThemeProvider";
 import { loginUrl, navLinks, products, site } from "@/lib/site";
@@ -86,7 +86,6 @@ export default function Header() {
           >
             <span className="hidden rounded bg-blue-600 px-1.5 py-px text-[11px] font-semibold text-white sm:inline">New</span>
             <span>Accounting is next. Join the waiting list and help decide what gets built first.</span>
-            <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <button
             onClick={() => setBarOpen(false)}

@@ -3,39 +3,58 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  /* Tailwind-recommended v4 pairing (what tailwindcss.com itself
-   * uses in its own docs): Inter for sans, IBM Plex Mono for mono.
-   * Both self-hosted via next/font/google in app/layout.tsx and
-   * exposed as --font-inter / --font-ibm-plex-mono. We re-expose
-   * them through Tailwind's own tokens so `font-sans` and
-   * `font-mono` utilities Just Work. */
+  /* Brand brief 6.3: one family does everything — Inter. The mono
+   * token exists only for literal code samples; it is the system
+   * mono, never a design face. */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-ibm-plex-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
-  /* ── Brand palette — matched 2026-10-12 to the official Colossal
-   * Hub logo pack. Navy #203060 is the brand primary (ring +
-   * wordmark); Mint #88D0B8 is the C-letter accent. */
-  --color-primary: #203060;
-  --color-primary-dark: #1A2850;
-  --color-accent-mint: #88D0B8;
+  /* ── Brand palette — Brand Identity Brief 6.2 (2026-11-02).
+   * Colossal Navy #243665 is the primary; Turquoise #8ED1BA is a
+   * FILL colour only; Deep Green #156B4E is the green that speaks
+   * (links, emphasis, success). */
+  --color-primary: #243665;
+  --color-primary-dark: #1C2A50;
+  --color-accent-mint: #8ED1BA;
 
   /* Tailwind's own blue-* scale is REDEFINED to a navy ramp so every
    * `bg-blue-600`, `text-blue-400`, etc. that was written for the
    * previous blue brand automatically rebrands without touching a
    * single component (~115 call sites across the site). Values are
-   * tuned so blue-600 lands exactly on the brand navy and the scale
+   * tuned so blue-600 lands exactly on Colossal Navy and the scale
    * stays ordered light-to-dark. */
-  --color-blue-50:  #E8ECF4;
-  --color-blue-100: #D1D8E8;
-  --color-blue-200: #A3B1D1;
-  --color-blue-300: #7589B5;
-  --color-blue-400: #4F6598;
-  --color-blue-500: #334678;
-  --color-blue-600: #203060;   /* ← brand navy */
-  --color-blue-700: #1A2850;   /* ← darker (hover) */
-  --color-blue-800: #141F42;
-  --color-blue-900: #0E1733;
-  --color-blue-950: #080E22;
+  --color-blue-50:  #EAEDF5;
+  --color-blue-100: #D5DAE9;
+  --color-blue-200: #ABB5D3;
+  --color-blue-300: #8291BC;
+  --color-blue-400: #5A6EA6;
+  --color-blue-500: #3A4F8A;
+  --color-blue-600: #243665;   /* ← Colossal Navy */
+  --color-blue-700: #1C2A50;   /* ← darker (hover) */
+  --color-blue-800: #16213F;
+  --color-blue-900: #101830;
+  --color-blue-950: #0A0F1F;
+
+  /* green-* is the brand green ramp: green-700 lands exactly on
+   * Deep Green (the only green allowed as text on white) and
+   * green-300 on the logo Turquoise (fills, and text on navy). */
+  --color-green-50:  #E9F5F0;
+  --color-green-100: #D3EBE1;
+  --color-green-200: #B1DCC9;
+  --color-green-300: #8ED1BA;  /* ← Turquoise — fill only on light */
+  --color-green-400: #5BB392;
+  --color-green-500: #2E8F6B;
+  --color-green-600: #1B7A58;
+  --color-green-700: #156B4E;  /* ← Deep Green — links, emphasis */
+  --color-green-800: #10543D;
+  --color-green-900: #0B3D2C;
+  --color-green-950: #06271C;
+
+  /* Functional colours (brief 6.2): warning is burnt orange, not
+   * yellow; error and info anchored on the brief's hexes. */
+  --color-amber-700: #A35A00;
+  --color-red-600:   #B3261E;
+  --color-sky-600:   #1B5FA8;
 
   /* Slate neutrals — unchanged. */
   --color-slate-950: #020617;
@@ -71,12 +90,12 @@ code, kbd, pre, samp {
 }
 
 ::selection {
-  background: #203060;
+  background: #243665;
   color: #ffffff;
 }
 
 :focus-visible {
-  outline: 2px solid #203060;
+  outline: 2px solid #243665;
   outline-offset: 2px;
 }
 
@@ -90,17 +109,10 @@ code, kbd, pre, samp {
 
 /* ---------- Motion ---------- */
 
-/* Scroll reveal. Only hides content when JS is running, so nothing is lost without it. */
-.js .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--reveal-delay, 0ms);
-}
-.js .reveal.is-in {
-  opacity: 1;
-  transform: none;
-}
+/* Scroll reveal is retired: brief 6.7 names fade-and-slide on every
+ * section as a template tell. The Reveal component still toggles
+ * .is-in (the grow-bar charts key off it); content just no longer
+ * hides or slides. */
 
 /* Infinite strip of feature labels. */
 @keyframes marquee {

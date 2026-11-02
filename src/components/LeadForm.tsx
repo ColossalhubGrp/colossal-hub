@@ -52,11 +52,11 @@ export default function LeadForm({
         <p className="mt-3 leading-7 text-slate-600 dark:text-slate-400">
           WhatsApp should have opened with your details filled in. Press send and we will reply in the same chat. If
           it did not open,{" "}
-          <a href={sentTo} target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 dark:text-blue-400 underline underline-offset-2">
+          <a href={sentTo} target="_blank" rel="noopener noreferrer" className="font-medium text-green-700 dark:text-green-300 underline underline-offset-2">
             open it here
           </a>{" "}
           or email{" "}
-          <a href={`mailto:${site.email}`} className="font-medium text-blue-600 dark:text-blue-400 underline underline-offset-2">
+          <a href={`mailto:${site.email}`} className="font-medium text-green-700 dark:text-green-300 underline underline-offset-2">
             {site.email}
           </a>
           .

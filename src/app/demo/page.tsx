@@ -19,7 +19,7 @@ export default function DemoPage() {
     <section>
       <Container className="grid gap-14 py-16 sm:py-24 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <div>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Book a demo</h1>
+          <h1 className="text-4xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-5xl">Book a demo</h1>
           <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-400">
             Tell us a little about the business and what you want to fix first. We would rather see how your month
             actually works than show you slides.

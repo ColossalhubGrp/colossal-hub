@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import DashboardMock from "@/components/DashboardMock";
 import HeroHeadline from "@/components/HeroHeadline";
 import Hub from "@/components/Hub";
@@ -20,7 +20,7 @@ const capabilities = [
   "PAYE and AIDS levy",
   "NSSA ceilings",
   "ZIMDEF",
-  "USD and ZiG pay",
+  "US$ and ZiG pay",
   "Payslips on WhatsApp",
   "Leave and balances",
   "Clock-in with location",
@@ -57,12 +57,11 @@ const cardBase =
 function LearnMore({ dark = false }: { dark?: boolean }) {
   return (
     <span
-      className={`mt-5 inline-flex items-center gap-1.5 text-sm font-semibold ${
-        dark ? "text-blue-300" : "text-blue-600 dark:text-blue-400"
+      className={`mt-5 inline-flex items-center text-sm font-semibold underline-offset-4 group-hover:underline ${
+        dark ? "text-green-300" : "text-green-700 dark:text-green-300"
       }`}
     >
       Learn more
-      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
     </span>
   );
 }
@@ -79,7 +78,6 @@ export default function Home() {
               className="group inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 dark:border-blue-900 dark:bg-blue-950/50 dark:text-blue-300"
             >
               Nothing to install. Your team uses it from WhatsApp.
-              <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </Reveal>
           <div className="mt-6">
@@ -105,7 +103,7 @@ export default function Home() {
 
         <Container className="pb-24 pt-16 sm:pb-28">
           <DashboardMock />
-          <p className="mt-16 text-center text-xs text-slate-500">Illustration with sample figures.</p>
+          <p className="mt-16 text-center text-xs text-slate-500">A real screen, and a real WhatsApp thread.</p>
         </Container>
       </section>
 
@@ -113,7 +111,7 @@ export default function Home() {
       <section className="border-b border-slate-200 dark:border-slate-800">
         <Container className="grid gap-8 py-16 sm:py-24 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-4xl">
               Every month is the same month.
             </h2>
           </Reveal>
@@ -137,7 +135,7 @@ export default function Home() {
       <section className="border-b border-slate-200 dark:border-slate-800">
         <Container className="py-16 sm:py-24">
           <Reveal className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight text-balance text-slate-900 dark:text-white sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-balance text-slate-900 dark:text-white sm:text-4xl">
               Start with the application you need today.
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-400">
@@ -157,7 +155,7 @@ export default function Home() {
                     <LearnMore />
                   </div>
                   <div className="rounded-xl bg-white p-4 shadow-sm dark:bg-slate-900" aria-hidden>
-                    <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400">Today · Dispatch</p>
+                    <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400">Dispatch, today</p>
                     <ul className="mt-2 space-y-2 text-[13px]">
                       {[
                         ["R. Moyo", "In 06:58", "text-blue-700 bg-blue-50 dark:bg-blue-950 dark:text-blue-300"],
@@ -238,7 +236,7 @@ export default function Home() {
       <section className="border-b border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-transparent">
         <Container className="grid items-center gap-14 py-16 sm:py-24 lg:grid-cols-2">
           <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight text-balance text-slate-900 dark:text-white sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-balance text-slate-900 dark:text-white sm:text-4xl">
               Each one works on its own. Together, they stop repeating each other.
             </h2>
             <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-400">
@@ -257,14 +255,13 @@ export default function Home() {
       <section className="overflow-hidden bg-slate-900 dark:bg-slate-950">
         <Container className="grid items-center gap-14 py-16 sm:py-24 lg:grid-cols-[1fr_0.9fr_1fr] lg:gap-12">
           <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Your team already knows how to use it.</h2>
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-white sm:text-4xl">Your team already knows how to use it.</h2>
             <p className="mt-5 text-lg leading-8 text-slate-400">
               There is nothing to install, no password to reset, and no training day, because your people are already
               in WhatsApp all day.
             </p>
-            <Link href="/whatsapp" className="group mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-400 hover:text-blue-300">
+            <Link href="/whatsapp" className="mt-8 inline-flex items-center text-sm font-semibold text-green-300 underline-offset-4 hover:underline">
               What each person can do on WhatsApp
-              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
           </Reveal>
 
@@ -278,7 +275,7 @@ export default function Home() {
                     <>
                       Morning Rudo. Your September payslip is ready.
                       <br />
-                      <span className="font-semibold">Net pay: USD 414.02</span>
+                      <span className="font-semibold">Net pay: US$414.02</span>
                     </>
                   ),
                   buttons: ["View payslip"],
@@ -318,7 +315,7 @@ export default function Home() {
           </ul>
 
           <Reveal className="relative mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-balance text-slate-900 dark:text-white sm:text-5xl">
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-balance text-slate-900 dark:text-white sm:text-5xl">
               Built for where you operate, not adapted for it.
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
@@ -355,9 +352,9 @@ export default function Home() {
                   time: "18:40",
                   text: (
                     <>
-                      USD 6,240 in September.
+                      US$6,240 in September.
                       <br />
-                      Production 3,910 · Dispatch 1,480 · Maintenance 850.
+                      Production 3,910, Dispatch 1,480, Maintenance 850.
                     </>
                   ),
                 },
@@ -365,13 +362,13 @@ export default function Home() {
                 {
                   from: "them",
                   time: "18:42",
-                  text: "You'd need about 900 extra overtime hours in Production, roughly USD 4,100 on top of a normal month.",
+                  text: "You'd need about 900 extra overtime hours in Production, roughly US$4,100 on top of a normal month.",
                 },
               ]}
             />
           </Reveal>
           <Reveal className="order-1 lg:order-2" delay={100}>
-            <h2 className="text-3xl font-bold tracking-tight text-balance text-slate-900 dark:text-white sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-balance text-slate-900 dark:text-white sm:text-4xl">
               Most systems tell you what happened. Ask ours why.
             </h2>
             <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-400">
@@ -380,9 +377,8 @@ export default function Home() {
               you by section. What next month looks like if the order lands. Asked in plain language, answered the
               same way.
             </p>
-            <Link href="/intelligence" className="group mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400">
+            <Link href="/intelligence" className="mt-8 inline-flex items-center text-sm font-semibold text-green-700 underline-offset-4 hover:underline dark:text-green-300">
               More on Intelligence
-              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
           </Reveal>
         </Container>

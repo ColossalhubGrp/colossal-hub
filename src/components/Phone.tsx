@@ -8,6 +8,13 @@ export type Message = {
   buttons?: string[];
 };
 
+export type PhoneImage = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
 /**
  * A drawn phone showing a WhatsApp-style thread. Purely illustrative: the
  * bubble tints echo WhatsApp so visitors recognise the setting, while the
@@ -17,12 +24,16 @@ export default function Phone({
   title = "Colossal Hub",
   subtitle = "business account",
   messages,
+  image,
   caption,
   className = "",
 }: {
   title?: string;
   subtitle?: string;
-  messages: Message[];
+  /** Drawn thread. Ignored when `image` is given. */
+  messages?: Message[];
+  /** A real screenshot of the thread, shown instead of drawn bubbles. */
+  image?: PhoneImage;
   caption?: string;
   className?: string;
 }) {
@@ -45,8 +56,17 @@ export default function Phone({
               <p className="text-[11px] text-slate-400">{subtitle}</p>
             </div>
           </div>
-          <div className="space-y-2 px-3 py-4 text-[13px] leading-snug">
-            {messages.map((m, i) => (
+          {image && (
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+              className="w-full"
+            />
+          )}
+          <div className="space-y-2 px-3 py-4 text-[13px] leading-snug" hidden={!!image || !messages?.length}>
+            {(messages ?? []).map((m, i) => (
               <div key={i} className={`flex ${m.from === "me" ? "justify-end" : "justify-start"}`}>
                 <div className="max-w-[85%]">
                   <div

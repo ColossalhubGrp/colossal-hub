@@ -34,8 +34,8 @@ function Shortlist() {
     <figure className="w-full">
       <div className="overflow-hidden rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-[0_24px_48px_-28px_rgba(15,23,42,0.35)]">
         <div className="border-b border-slate-200 dark:border-slate-800 px-5 py-4">
-          <p className="text-sm font-semibold text-slate-900 dark:text-white">Dispatch Supervisor · Shortlist</p>
-          <p className="text-xs text-slate-500 dark:text-slate-400">212 applications read · 3 of 12 shown</p>
+          <p className="text-sm font-semibold text-slate-900 dark:text-white">Dispatch Supervisor — shortlist</p>
+          <p className="text-xs text-slate-500 dark:text-slate-400">212 applications read, 3 of 12 shown</p>
         </div>
         <ul className="divide-y divide-slate-100 dark:divide-slate-800">
           {shortlist.map((c) => (
@@ -106,14 +106,14 @@ export default function RecruitPage() {
       <section className="border-b border-slate-200 dark:border-slate-800">
         <Container className="grid gap-12 py-16 sm:py-20 md:grid-cols-2 md:gap-16">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Ranking you can explain.</h2>
+            <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-3xl">Ranking you can explain.</h2>
             <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-400">
               Every score carries its reasoning. You can see what the model weighed, disagree with it, and override it.
               The shortlist you defend to a manager or a candidate is one you can actually account for.
             </p>
           </div>
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Use it on its own, or don&apos;t.</h2>
+            <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-3xl">Use it on its own, or don&apos;t.</h2>
             <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-400">
               Recruit works as a standalone product with whatever HR system you already have. If you do run Colossal
               Hub, a hire becomes an employee record without anyone re-typing anything.

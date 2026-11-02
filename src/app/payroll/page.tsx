@@ -14,7 +14,7 @@ const checks = [
   "PAYE and AIDS levy against the current tax table",
   "NSSA contributions capped at the ceiling",
   "ZIMDEF and sector council contributions",
-  "USD and ZiG portions split per employee",
+  "US$ and ZiG portions split per employee",
 ];
 
 function PayRunReview() {
@@ -23,8 +23,8 @@ function PayRunReview() {
       <div className="overflow-hidden rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-[0_24px_48px_-28px_rgba(15,23,42,0.35)]">
         <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-5 py-4">
           <div>
-            <p className="text-sm font-semibold text-slate-900 dark:text-white">Pay run · September 2026</p>
-            <p className="text-xs text-slate-500 dark:text-slate-400">84 employees · Ready for review</p>
+            <p className="text-sm font-semibold text-slate-900 dark:text-white">Pay run — September 2026</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">84 employees, ready for review</p>
           </div>
           <span className="rounded bg-blue-50 dark:bg-blue-950/60 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-300">
             Draft
@@ -124,7 +124,7 @@ export default function PayrollPage() {
           },
           {
             title: "Two currencies in one run.",
-            body: "Split pay between USD and ZiG per employee, and report across both without a second sheet.",
+            body: "Split pay between US$ and ZiG per employee, and report across both without a second sheet.",
           },
           {
             title: "We run it alongside you first.",

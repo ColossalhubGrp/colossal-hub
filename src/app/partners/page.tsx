@@ -48,7 +48,7 @@ export default function PartnersPage() {
 
       <section className="border-b border-slate-200 dark:border-slate-800">
         <Container className="py-16 sm:py-20">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">What a practice gets</h2>
+          <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-3xl">What a practice gets</h2>
           <ol className="mt-10 border-t border-slate-200 dark:border-slate-800">
             {gets.map((g, i) => (
               <li key={g.title} className="grid gap-2 border-b border-slate-200 dark:border-slate-800 py-6 sm:grid-cols-[3rem_18rem_1fr] sm:gap-6">
@@ -64,7 +64,7 @@ export default function PartnersPage() {
       <section className="bg-slate-900 dark:bg-slate-950">
         <Container className="flex flex-col gap-8 py-16 sm:py-20 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Stop rebuilding the same spreadsheet for the twentieth time.</h2>
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-white sm:text-4xl">Stop rebuilding the same spreadsheet for the twentieth time.</h2>
             <p className="mt-4 text-lg leading-8 text-slate-400">
               Tell us how many clients you run payroll for and how you do it today. We will tell you honestly whether it
               fits.

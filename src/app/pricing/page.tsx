@@ -75,7 +75,7 @@ export default function PricingPage() {
                 <Link
                   href={t.cta.href}
                   {...(t.cta.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 md:text-right"
+                  className="text-sm font-semibold text-green-700 dark:text-green-300 hover:text-blue-700 dark:hover:text-blue-300 md:text-right"
                 >
                   {t.cta.label} &rarr;
                 </Link>
@@ -92,7 +92,7 @@ export default function PricingPage() {
 
       <section className="border-b border-slate-200 dark:border-slate-800">
         <Container className="grid gap-8 py-16 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Pricing questions</h2>
+          <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-3xl">Pricing questions</h2>
           <div className="divide-y divide-slate-200 dark:divide-slate-800 border-y border-slate-200 dark:border-slate-800">
             {faqs.map((f) => (
               <details key={f.q} className="group py-1">

@@ -67,7 +67,7 @@ export default function Hub() {
           </span>
           <span className="whitespace-nowrap text-xs font-semibold text-slate-700 dark:text-slate-300">
             {n.name}
-            {n.soon && <span className="font-normal text-slate-400"> · soon</span>}
+            {n.soon && <span className="font-normal text-slate-400"> (soon)</span>}
           </span>
         </Link>
       ))}

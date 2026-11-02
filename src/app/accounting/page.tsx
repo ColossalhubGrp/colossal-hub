@@ -21,7 +21,7 @@ const willCover = [
 export default function AccountingPage() {
   return (
     <>
-      <PageIntro label="Accounting · Coming soon" title="Accounting is next.">
+      <PageIntro label="Accounting — coming soon" title="Accounting is next.">
         <p>
           Books that build themselves from what your business is already doing: payroll already run, expenses already
           claimed, invoices already raised. Join the waiting list, and we will bring you in early.
@@ -30,7 +30,7 @@ export default function AccountingPage() {
 
       <section className="border-b border-slate-200 dark:border-slate-800">
         <Container className="py-16 sm:py-20">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">What it will cover</h2>
+          <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-3xl">What it will cover</h2>
           <ul className="mt-10 grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
             {willCover.map(([name, detail]) => (
               <li key={name} className="border-t border-slate-200 dark:border-slate-800 pt-4">
@@ -45,7 +45,7 @@ export default function AccountingPage() {
       <section id="waiting-list" className="scroll-mt-20">
         <Container className="grid gap-12 py-16 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Join the waiting list</h2>
+            <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-3xl">Join the waiting list</h2>
             <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-400">
               Early access members help decide what gets built first.
             </p>

@@ -80,7 +80,7 @@ export default function ComplianceCalendarPage() {
       <section id="reminders" className="scroll-mt-20">
         <Container className="grid gap-12 py-16 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Get reminded on WhatsApp</h2>
+            <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-3xl">Get reminded on WhatsApp</h2>
             <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-400">
               One message before each deadline. Nothing else unless you ask for it.
             </p>

@@ -39,7 +39,7 @@ export default function IntelligencePage() {
       <section className="border-b border-slate-200 dark:border-slate-800">
         <Container className="grid gap-14 py-16 sm:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-20">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">
+            <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-3xl">
               Thin data gives thin answers.
             </h2>
             <div className="mt-5 space-y-5 text-lg leading-8 text-slate-600 dark:text-slate-400">
@@ -86,7 +86,7 @@ export default function IntelligencePage() {
               {
                 from: "them",
                 time: "08:07",
-                text: "At Grade A2 with the mill's usual overtime, about USD 5,300 more a month, plus around USD 480 in employer NSSA and levies. September would have been roughly 67,600 instead of 61,800.",
+                text: "At Grade A2 with the mill's usual overtime, about US$5,300 more a month, plus around US$480 in employer NSSA and levies. September would have been roughly 67,600 instead of 61,800.",
               },
               { from: "me", time: "08:09", text: "Who is due for a contract renewal in the next sixty days?" },
               { from: "them", time: "08:09", text: "Four people. The first is R. Chikwanha in Stores on 14 October." },

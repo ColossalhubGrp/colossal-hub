@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
 
 export function Container({ className = "", children }: { className?: string; children: React.ReactNode }) {
@@ -34,13 +33,13 @@ export function Button({ href, variant = "primary", className = "", children }: 
 }
 
 export function TextLink({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) {
+  // Deep green speaks (brief 6.2); no arrow appended to the text (6.7).
   return (
     <Link
       href={href}
-      className={`group inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 ${className}`}
+      className={`inline-flex items-center text-sm font-semibold text-green-700 underline-offset-4 hover:underline dark:text-green-300 ${className}`}
     >
       {children}
-      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
     </Link>
   );
 }
@@ -61,8 +60,8 @@ export function PageIntro({
     <section className="border-b border-slate-200 dark:border-slate-800">
       <Container className={`py-16 sm:py-24 ${aside ? "grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center" : ""}`}>
         <Reveal>
-          {label && <p className="text-sm font-medium text-blue-600 dark:text-blue-400">{label}</p>}
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-balance text-slate-900 dark:text-white sm:text-5xl sm:leading-[1.1]">
+          {label && <p className="text-sm font-medium text-green-700 dark:text-green-300">{label}</p>}
+          <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-[-0.035em] text-balance text-slate-900 dark:text-white sm:text-5xl sm:leading-[1.1]">
             {title}
           </h1>
           {children && (
@@ -91,7 +90,7 @@ export function Split({
     <section className={`border-b border-slate-200 dark:border-slate-800 ${className}`}>
       <Container className="grid gap-8 py-16 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <Reveal>
-          <h2 className="text-2xl font-bold tracking-tight text-balance text-slate-900 dark:text-white sm:text-3xl">
+          <h2 className="text-2xl font-extrabold tracking-[-0.03em] text-balance text-slate-900 dark:text-white sm:text-3xl">
             {title}
           </h2>
           {intro && <div className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-400">{intro}</div>}
@@ -130,7 +129,7 @@ export function ClosingCta({
       <Container className="py-16 sm:py-20">
         <Reveal className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">{title}</h2>
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-balance text-white sm:text-4xl">{title}</h2>
             <p className="mt-4 text-lg leading-8 text-slate-400">{body}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row md:shrink-0">
@@ -138,10 +137,9 @@ export function ClosingCta({
             {secondary && (
               <Link
                 href={secondary.href}
-                className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 hover:border-slate-500 hover:text-white transition-colors"
+                className="inline-flex items-center justify-center rounded-md border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 hover:border-slate-500 hover:text-white transition-colors"
               >
                 {secondary.label}
-                <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             )}
           </div>
@@ -166,7 +164,7 @@ export function Tbc({ children = "To be confirmed" }: { children?: React.ReactNo
 /** Long-form text layout for legal and policy pages. */
 export function Prose({ children }: { children: React.ReactNode }) {
   return (
-    <div className="max-w-3xl space-y-5 leading-7 text-slate-700 dark:text-slate-300 [&_h2]:mt-12 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-slate-900 dark:[&_h2]:text-white [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5 [&_a]:font-medium [&_a]:text-blue-600 dark:[&_a]:text-blue-400 [&_a]:underline [&_a]:underline-offset-2">
+    <div className="max-w-3xl space-y-5 leading-7 text-slate-700 dark:text-slate-300 [&_h2]:mt-12 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-slate-900 dark:[&_h2]:text-white [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5 [&_a]:font-medium [&_a]:text-green-700 dark:[&_a]:text-green-300 [&_a]:underline [&_a]:underline-offset-2">
       {children}
     </div>
   );

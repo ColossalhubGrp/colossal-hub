@@ -14,7 +14,7 @@ export default function TermsPage() {
   return (
     <section>
       <Container className="py-16 sm:py-24">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Terms of use</h1>
+        <h1 className="text-4xl font-extrabold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-5xl">Terms of use</h1>
         <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
           Last updated: <Tbc>Date of publication</Tbc>
         </p>

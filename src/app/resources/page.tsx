@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { Container, PageIntro, Tbc } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -28,7 +27,6 @@ export default function ResourcesPage() {
             <span className="mt-2 leading-7 text-slate-600 dark:text-slate-400">
               Every statutory deadline you have this year, on one page, with reminders on WhatsApp.
             </span>
-            <ArrowRight className="mt-5 h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-1" />
           </Link>
 
           <div className="flex flex-col border-t border-slate-300 dark:border-slate-700 py-6 md:pl-10">

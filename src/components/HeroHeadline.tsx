@@ -47,27 +47,27 @@ export default function HeroHeadline() {
   }, [index, length, deleting]);
 
   return (
-    <h1 className="mx-auto max-w-5xl text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:leading-[1.1] md:text-[2.5rem] lg:text-[3.6rem]">
+    <h1 className="mx-auto max-w-5xl text-4xl font-extrabold tracking-[-0.035em] text-slate-900 dark:text-white sm:leading-[1.1] md:text-[2.5rem] lg:text-[3.6rem]">
       <span className="sr-only">Run your people, your pay and your numbers from one place. Or from WhatsApp.</span>
 
       {/* Reduced motion: the original sentence, unanimated. */}
       <span aria-hidden className="hidden motion-reduce:inline">
         Run your people, your pay and your numbers from one place.{" "}
-        <span className="text-blue-600 dark:text-blue-400">Or from WhatsApp.</span>
+        <span className="text-green-700 dark:text-green-300">Or from WhatsApp.</span>
       </span>
 
       <span aria-hidden className="motion-reduce:hidden">
         Run your{" "}
         <span className="inline-grid text-left align-baseline">
           <span className="invisible col-start-1 row-start-1">{longest}</span>
-          <span className="col-start-1 row-start-1 whitespace-nowrap text-blue-600 dark:text-blue-400">
+          <span className="col-start-1 row-start-1 whitespace-nowrap text-green-700 dark:text-green-300">
             {words[index].slice(0, length)}
             <span className="caret ml-1 inline-block h-[0.82em] w-[3px] translate-y-[0.06em] rounded-full bg-current" />
           </span>
         </span>{" "}
         from one place.
         <br />
-        <span className="text-blue-600 dark:text-blue-400">Or from WhatsApp.</span>
+        <span className="text-green-700 dark:text-green-300">Or from WhatsApp.</span>
       </span>
     </h1>
   );

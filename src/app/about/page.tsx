@@ -33,7 +33,7 @@ const values = [
   },
   {
     title: "We strive to exceed the expectations of our stakeholders",
-    body: "We do not aim to satisfy our stakeholders; we aim to amaze them. For our clients, we provide solutions that adapt to an ever-changing business environment.",
+    body: "We do not aim to satisfy our stakeholders; we aim to amaze them. For our clients, we build applications that adapt as their business changes.",
   },
   {
     title: "We believe in deep collaboration",
@@ -76,7 +76,7 @@ function Row({ label, children }: { label: string; children: React.ReactNode }) 
   return (
     <section className="border-b border-slate-200 dark:border-slate-800">
       <Container className="grid gap-6 py-14 sm:py-16 lg:grid-cols-[14rem_1fr] lg:gap-16">
-        <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 lg:pt-1.5">{label}</h2>
+        <h2 className="text-sm font-semibold text-green-700 dark:text-green-300 lg:pt-1.5">{label}</h2>
         <div className="max-w-3xl">{children}</div>
       </Container>
     </section>
@@ -88,8 +88,8 @@ export default function AboutPage() {
     <>
       <section className="border-b border-slate-200 dark:border-slate-800">
         <Container className="py-16 sm:py-24">
-          <p className="text-sm font-medium text-blue-600 dark:text-blue-400">About Colossal Hub</p>
-          <h1 className="mt-3 max-w-4xl text-4xl font-bold tracking-tight text-balance text-slate-900 dark:text-white sm:text-6xl sm:leading-[1.05]">
+          <p className="text-sm font-medium text-green-700 dark:text-green-300">About Colossal Hub</p>
+          <h1 className="mt-3 max-w-4xl text-4xl font-extrabold tracking-[-0.03em] text-balance text-slate-900 dark:text-white sm:text-6xl sm:leading-[1.05]">
             The operating system African businesses grow on.
           </h1>
         </Container>
@@ -141,14 +141,14 @@ export default function AboutPage() {
       <section className="border-b border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/30">
         <Container className="grid gap-12 py-14 sm:py-16 md:grid-cols-2 md:gap-16">
           <div>
-            <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400">Our vision</h2>
+            <h2 className="text-sm font-semibold text-green-700 dark:text-green-300">Our vision</h2>
             <p className="mt-4 text-2xl font-semibold leading-snug tracking-tight text-slate-900 dark:text-white">
               A world where every individual or company has the power and chance to intentionally grow their business
-              using world-class technology.
+              using technology built for how they actually work.
             </p>
           </div>
           <div>
-            <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400">Our mission</h2>
+            <h2 className="text-sm font-semibold text-green-700 dark:text-green-300">Our mission</h2>
             <p className="mt-4 text-2xl font-semibold leading-snug tracking-tight text-slate-900 dark:text-white">
               To help companies grow by providing them with useful, intelligent and easy-to-use integrated business
               systems.

@@ -33,7 +33,7 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  { name: "People (HR)", href: "/hr", line: "Everyone you employ, in one place." },
+  { name: "People", href: "/hr", line: "Everyone you employ, in one place." },
   { name: "Payroll", href: "/payroll", line: "Wages and statutory returns, to the rules that apply to you." },
   { name: "Intelligence", href: "/intelligence", line: "Ask your business a question and get an answer." },
   { name: "Recruit", href: "/recruit", line: "Every application read and ranked, with the reasoning shown." },
@@ -42,7 +42,7 @@ export const products: Product[] = [
 ];
 
 export const navLinks = [
-  { label: "Why Colossal", href: "/why" },
+  { label: "Why Colossal Hub", href: "/why" },
   { label: "Partners", href: "/partners" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
@@ -51,7 +51,7 @@ export const navLinks = [
 // Used by the floating WhatsApp button to say which page the visitor came from.
 export const pageNames: Record<string, string> = {
   "/": "the home page",
-  "/hr": "the People (HR) page",
+  "/hr": "the People page",
   "/payroll": "the Payroll page",
   "/intelligence": "the Intelligence page",
   "/recruit": "the Recruit page",

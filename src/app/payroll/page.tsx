@@ -4,7 +4,7 @@ import { Different, PricingPointer, Problem, WorksWith } from "@/components/prod
 import { Button, ClosingCta, DefinitionList, PageIntro, Split } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: { absolute: "Payroll Software for Zimbabwe | NEC Grades, PAYE, NSSA | Colossal Hub" },
+  title: { absolute: "Colossal Hub Payroll | Payroll software for Zimbabwe — NEC grades, PAYE, NSSA" },
   description:
     "Payroll that calculates against current tax tables, sector wage grids and contribution ceilings, in single or dual currency, with returns ready to file.",
 };
@@ -56,7 +56,7 @@ function PayRunReview() {
 export default function PayrollPage() {
   return (
     <>
-      <PageIntro label="Payroll" title="Stop calculating. Start checking." aside={<PayRunReview />}>
+      <PageIntro label="Colossal Hub Payroll" title="Stop calculating. Start checking." aside={<PayRunReview />}>
         <p>
           Wages, deductions and statutory returns calculated against the grades, tax tables and ceilings that actually
           apply to your sector and your country. In one currency or two.

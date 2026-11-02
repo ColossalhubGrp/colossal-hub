@@ -4,7 +4,7 @@ import { Different, PricingPointer, Problem, WorksWith } from "@/components/prod
 import { Button, ClosingCta, DefinitionList, PageIntro, Split } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: { absolute: "HR Software for Growing Businesses | Colossal Hub" },
+  title: { absolute: "Colossal Hub People | HR software for growing businesses" },
   description:
     "Employee records, leave, attendance, shifts and performance in one place — with self-service for your staff over WhatsApp.",
 };
@@ -13,7 +13,7 @@ export default function HrPage() {
   return (
     <>
       <PageIntro
-        label="People (HR)"
+        label="Colossal Hub People"
         title="Everyone you employ, in one place."
         aside={
           <Phone

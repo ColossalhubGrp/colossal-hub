@@ -4,7 +4,7 @@ import { PricingPointer, Problem, WorksWith } from "@/components/product";
 import { Button, ClosingCta, Container, DefinitionList, PageIntro, Split } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Business Intelligence for SMEs | Colossal Hub" },
+  title: { absolute: "Colossal Hub Intelligence | Answers across your whole business" },
   description:
     "Ask a question about your business in plain language and get an answer drawn from your people, pay and money together.",
 };
@@ -18,7 +18,7 @@ const depth = [
 export default function IntelligencePage() {
   return (
     <>
-      <PageIntro label="Intelligence" title="Ask your business a question. Get an answer.">
+      <PageIntro label="Colossal Hub Intelligence" title="Ask your business a question. Get an answer.">
         <p>
           Not another dashboard. Intelligence that reads across your people, your pay and your money together, and
           replies in plain language.

@@ -3,7 +3,7 @@ import { PricingPointer, Problem } from "@/components/product";
 import { Button, ClosingCta, Container, DefinitionList, PageIntro, Split } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Recruitment Software | Screen and Shortlist Faster | Colossal Hub" },
+  title: { absolute: "Colossal Hub Recruit | Every application read, ranked and explained" },
   description:
     "Read and rank every application against the role, with the reasoning shown. Works standalone or with your existing HR system.",
 };
@@ -58,7 +58,7 @@ function Shortlist() {
 export default function RecruitPage() {
   return (
     <>
-      <PageIntro label="Recruit" title="Two hundred applications. One afternoon." aside={<Shortlist />}>
+      <PageIntro label="Colossal Hub Recruit" title="Two hundred applications. One afternoon." aside={<Shortlist />}>
         <p>
           AI recruitment that reads every application against the job you actually advertised, ranks them with its
           reasoning shown, and gives you a shortlist you can defend.

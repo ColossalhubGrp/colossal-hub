@@ -21,7 +21,7 @@ const willCover = [
 export default function AccountingPage() {
   return (
     <>
-      <PageIntro label="Accounting — coming soon" title="Accounting is next.">
+      <PageIntro label="Colossal Hub Accounting — coming soon" title="Accounting is next.">
         <p>
           Books that build themselves from what your business is already doing: payroll already run, expenses already
           claimed, invoices already raised. Join the waiting list, and we will bring you in early.

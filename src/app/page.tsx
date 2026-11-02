@@ -10,7 +10,7 @@ import Reveal from "@/components/Reveal";
 import { Button, ClosingCta, Container } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: { absolute: "Colossal Hub | HR, Payroll and Business Intelligence for African Businesses" },
+  title: { absolute: "Colossal Hub | People, Payroll and Intelligence for African businesses" },
   description:
     "HR, payroll and intelligence built around your country's wage grids, tax tables and filing deadlines. Run it from WhatsApp. Start with one application.",
 };

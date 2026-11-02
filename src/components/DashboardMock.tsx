@@ -29,8 +29,8 @@ export default function DashboardMock() {
           <Image
             src="/screens/overall-dashboard.png"
             alt="The Colossal Hub overall dashboard: employee numbers, new hires, turnover and 12-month movement charts."
-            width={1366}
-            height={640}
+            width={1361}
+            height={649}
             priority
             className="w-full"
           />

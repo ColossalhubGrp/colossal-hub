@@ -79,6 +79,10 @@ html {
 
 body {
   font-family: var(--font-sans);
+  /* Same Inter OpenType alternates as the product app — ss01
+   * (single-storey a), cv05 (tailed l), cv11, ss03 — so the brand
+   * face reads identically on both sites. */
+  font-feature-settings: "ss01", "cv05", "cv11", "ss03";
   background: #ffffff;
   color: #0F172A;
 }

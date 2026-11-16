@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Phone from "@/components/Phone";
+import Screen from "@/components/Screen";
 import { Different, PricingPointer, Problem, WorksWith } from "@/components/product";
 import { Button, ClosingCta, DefinitionList, PageIntro, Split } from "@/components/ui";
 
@@ -105,6 +106,18 @@ export default function HrPage() {
                 "Training programmes and attendance, vehicle logs and running costs, and assets assigned to the people holding them.",
             },
           ]}
+        />
+      </Split>
+
+      <Split
+        title="The whole workforce, at a glance"
+        intro="Headcount, hires against exits, age bands and length of service — drawn live from your employee records, not from a slide somebody made last quarter."
+      >
+        <Screen
+          src="/screens/hr-dashboard.png"
+          alt="The HR dashboard: 725 employees, headcount growth over 12 months, hiring against exits, department sizes, age bands and length of service."
+          width={2400}
+          height={1193}
         />
       </Split>
 

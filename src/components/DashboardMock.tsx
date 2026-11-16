@@ -1,11 +1,11 @@
-import Image from "next/image";
 import Phone from "./Phone";
 import Reveal from "./Reveal";
+import DashboardSlideshow from "./DashboardSlideshow";
 
 /**
- * The real product, not a drawing: the Overall Dashboard as it runs at
+ * The real product, not a drawing: live dashboards as they run at
  * app.colossalhub.com, with the live WhatsApp receipt thread overlapping
- * it. Brief 6.4: "a real screen beats a false photograph" — and a real
+ * them. Brief 6.4: "a real screen beats a false photograph" — and a real
  * screen beats an invented mock-up for the same reason.
  *
  * To refresh: retake the screenshots, re-crop, replace the files in
@@ -17,24 +17,30 @@ export default function DashboardMock() {
       <div className="dot-grid pointer-events-none absolute -inset-x-10 -inset-y-12" aria-hidden />
 
       <Reveal className="relative lg:pr-48">
-        <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-[0_40px_80px_-40px_rgba(20,26,34,0.45)]">
-          <div className="flex items-center gap-1.5 border-b border-slate-200 dark:border-slate-800 px-4 py-3">
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 dark:bg-slate-700" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 dark:bg-slate-700" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 dark:bg-slate-700" />
-            <span className="ml-4 rounded bg-slate-100 dark:bg-slate-800 px-3 py-0.5 text-[11px] text-slate-500 dark:text-slate-400">
-              app.colossalhub.com
-            </span>
-          </div>
-          <Image
-            src="/screens/overall-dashboard.png"
-            alt="The Colossal Hub overall dashboard: employee numbers, new hires, turnover and 12-month movement charts."
-            width={1361}
-            height={649}
-            priority
-            className="w-full"
-          />
-        </div>
+        <DashboardSlideshow
+          frames={[
+            {
+              src: "/screens/overall-dashboard.png",
+              alt: "The overall dashboard: 725 employees, new hires, separations, turnover and 12-month movement charts.",
+              label: "Overview",
+            },
+            {
+              src: "/screens/overall-dashboard-payroll.png",
+              alt: "Further down the overview: departments, age bands, the gender mix and the month's payroll cost.",
+              label: "Workforce & cost",
+            },
+            {
+              src: "/screens/hr-dashboard.png",
+              alt: "The HR dashboard: headcount growth, hires against exits, age bands and length of service.",
+              label: "People",
+            },
+            {
+              src: "/screens/payroll-dashboard.png",
+              alt: "The payroll dashboard: this run's net pay, what is owed to ZIMRA, NSSA and ZIMDEF, and when it falls due.",
+              label: "Payroll",
+            },
+          ]}
+        />
       </Reveal>
 
       <div

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Check, CircleAlert } from "lucide-react";
+import Screen from "@/components/Screen";
 import { Different, PricingPointer, Problem, WorksWith } from "@/components/product";
 import { Button, ClosingCta, DefinitionList, PageIntro, Split } from "@/components/ui";
 
@@ -9,54 +9,23 @@ export const metadata: Metadata = {
     "Payroll that calculates against current tax tables, sector wage grids and contribution ceilings, in single or dual currency, with returns ready to file.",
 };
 
-const checks = [
-  "Earnings calculated against the grade structure",
-  "PAYE and AIDS levy against the current tax table",
-  "NSSA contributions capped at the ceiling",
-  "ZIMDEF and sector council contributions",
-  "US$ and ZiG portions split per employee",
-];
-
-function PayRunReview() {
-  return (
-    <figure className="w-full">
-      <div className="overflow-hidden rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-[0_24px_48px_-28px_rgba(15,23,42,0.35)]">
-        <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-5 py-4">
-          <div>
-            <p className="text-sm font-semibold text-slate-900 dark:text-white">Pay run — September 2026</p>
-            <p className="text-xs text-slate-500 dark:text-slate-400">84 employees, ready for review</p>
-          </div>
-          <span className="rounded bg-blue-50 dark:bg-blue-950/60 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-300">
-            Draft
-          </span>
-        </div>
-        <ul className="divide-y divide-slate-100 dark:divide-slate-800 px-5">
-          {checks.map((c) => (
-            <li key={c} className="flex items-center gap-3 py-3 text-sm text-slate-700 dark:text-slate-300">
-              <Check className="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" />
-              {c}
-            </li>
-          ))}
-        </ul>
-        <div className="border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 px-5 py-4">
-          <p className="flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-            <CircleAlert className="h-4 w-4 text-amber-500" />3 employees to check before you approve
-          </p>
-          <ul className="mt-2 space-y-1.5 pl-6 text-sm text-slate-600 dark:text-slate-400">
-            <li>2 people worked more overtime than their contract allows</li>
-            <li>1 new starter has no tax number on file</li>
-          </ul>
-        </div>
-      </div>
-      <figcaption className="mt-3 text-xs text-slate-500">Illustration of a pay run review.</figcaption>
-    </figure>
-  );
-}
-
 export default function PayrollPage() {
   return (
     <>
-      <PageIntro label="Colossal Hub Payroll" title="Stop calculating. Start checking." aside={<PayRunReview />}>
+      <PageIntro
+        label="Colossal Hub Payroll"
+        title="Stop calculating. Start checking."
+        aside={
+          <Screen
+            src="/screens/payroll-run.png"
+            alt="A processed pay run: gross, PAYE, AIDS levy, NSSA, ZIMDEF and net pay in US$ and ZiG, with every employee's payslip in the register below."
+            width={1920}
+            height={955}
+            priority
+            caption="A real pay run: gross to net in both currencies, with every payslip in the register."
+          />
+        }
+      >
         <p>
           Wages, deductions and statutory returns calculated against the grades, tax tables and ceilings that actually
           apply to your sector and your country. In one currency or two.
@@ -116,6 +85,18 @@ export default function PayrollPage() {
         />
       </Split>
 
+      <Split
+        title="One screen before pay day"
+        intro="This run's net pay, what is owed to ZIMRA, NSSA and ZIMDEF, and the date each amount falls due — before anyone has to ask."
+      >
+        <Screen
+          src="/screens/payroll-dashboard.png"
+          alt="The payroll dashboard: net pay against previous months, statutory obligations with their deadlines, and which departments carry the pay bill."
+          width={2400}
+          height={1193}
+        />
+      </Split>
+
       <Different
         items={[
           {
@@ -134,12 +115,21 @@ export default function PayrollPage() {
       />
 
       <Split title="On WhatsApp" intro="Payslip day stops being a printing job.">
-        <DefinitionList
-          items={[
-            { term: "Employees", detail: "Get their payslip as a message, with the breakdown, the day pay goes out." },
-            { term: "Whoever runs payroll", detail: "Fewer “where is my payslip” and “why is my pay different” questions, because the answer is already in the thread." },
-          ]}
-        />
+        <div className="space-y-10">
+          <DefinitionList
+            items={[
+              { term: "Employees", detail: "Get their payslip as a message, with the breakdown, the day pay goes out." },
+              { term: "Whoever runs payroll", detail: "Fewer “where is my payslip” and “why is my pay different” questions, because the answer is already in the thread." },
+            ]}
+          />
+          <Screen
+            src="/screens/payslip.png"
+            alt="A payslip: earnings, PAYE, AIDS levy, NSSA, pension and sector council dues itemised, with net pay shown in US$ and ZiG."
+            width={1920}
+            height={955}
+            caption="The payslip behind the message: every earning and deduction itemised, in both currencies."
+          />
+        </div>
       </Split>
 
       <WorksWith

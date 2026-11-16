@@ -344,27 +344,13 @@ export default function Home() {
           <Reveal className="order-2 lg:order-1">
             <Phone
               subtitle="Intelligence"
-              caption="Illustration. Figures are for a sample business."
-              messages={[
-                { from: "me", time: "18:40", text: "What did overtime cost us last month, by department?" },
-                {
-                  from: "them",
-                  time: "18:40",
-                  text: (
-                    <>
-                      US$6,240 in September.
-                      <br />
-                      Production 3,910, Dispatch 1,480, Maintenance 850.
-                    </>
-                  ),
-                },
-                { from: "me", time: "18:42", text: "What does next month look like if the order lands?" },
-                {
-                  from: "them",
-                  time: "18:42",
-                  text: "You'd need about 900 extra overtime hours in Production, roughly US$4,100 on top of a normal month.",
-                },
-              ]}
+              caption="A real thread from the live system."
+              image={{
+                src: "/screens/whatsapp-intelligence.png",
+                width: 527,
+                height: 934,
+                alt: "A real WhatsApp thread: asked about employees by grade, Colossal Hub lists the headcount in each grade, explains that grades 2 to 4 hold about 45% of the workforce, flags an unpopulated pay-grade field, and sends a bar chart.",
+              }}
             />
           </Reveal>
           <Reveal className="order-1 lg:order-2" delay={100}>

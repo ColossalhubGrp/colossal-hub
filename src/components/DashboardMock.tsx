@@ -50,10 +50,10 @@ export default function DashboardMock() {
         <Phone
           subtitle="business account"
           image={{
-            src: "/screens/whatsapp-receipt.png",
-            width: 266,
-            height: 242,
-            alt: "A real WhatsApp thread: Colossal Hub has read a photographed receipt and asks whether to post it as a supplier invoice or an expense claim.",
+            src: "/screens/whatsapp-intelligence-chart.png",
+            width: 527,
+            height: 615,
+            alt: "A real WhatsApp thread: asked about employees by grade, Colossal Hub explains that grades 2 to 4 hold about 45% of the workforce and sends a bar chart.",
           }}
         />
       </div>

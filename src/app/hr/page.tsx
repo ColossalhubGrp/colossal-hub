@@ -116,8 +116,8 @@ export default function HrPage() {
         <Screen
           src="/screens/hr-dashboard.png"
           alt="The HR dashboard: 725 employees, headcount growth over 12 months, hiring against exits, department sizes, age bands and length of service."
-          width={2400}
-          height={1193}
+          width={1910}
+          height={969}
         />
       </Split>
 

@@ -14,9 +14,8 @@ const INTERVAL_MS = 5000;
 /**
  * Crossfading slideshow of real product screens inside a browser frame.
  * All frames are ~2:1 screenshots, so one fixed aspect-ratio box holds
- * them without layout shift. Auto-advances every 5s; pauses while the
- * pointer is over it; never auto-advances for reduced-motion visitors,
- * who page through with the dots instead.
+ * them without layout shift. Auto-advances every 5s and pauses while
+ * the pointer is over it; the dots jump straight to a frame.
  */
 export default function DashboardSlideshow({ frames }: { frames: SlideshowFrame[] }) {
   const [index, setIndex] = useState(0);
@@ -24,7 +23,6 @@ export default function DashboardSlideshow({ frames }: { frames: SlideshowFrame[
 
   useEffect(() => {
     if (paused || frames.length < 2) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t = setInterval(() => setIndex((i) => (i + 1) % frames.length), INTERVAL_MS);
     return () => clearInterval(t);
   }, [paused, frames.length]);

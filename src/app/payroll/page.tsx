@@ -92,8 +92,8 @@ export default function PayrollPage() {
         <Screen
           src="/screens/payroll-dashboard.png"
           alt="The payroll dashboard: net pay against previous months, statutory obligations with their deadlines, and which departments carry the pay bill."
-          width={2400}
-          height={1193}
+          width={1917}
+          height={969}
         />
       </Split>
 
@@ -122,13 +122,15 @@ export default function PayrollPage() {
               { term: "Whoever runs payroll", detail: "Fewer “where is my payslip” and “why is my pay different” questions, because the answer is already in the thread." },
             ]}
           />
-          <Screen
-            src="/screens/payslip.png"
-            alt="A payslip: earnings, PAYE, AIDS levy, NSSA, pension and sector council dues itemised, with net pay shown in US$ and ZiG."
-            width={1920}
-            height={955}
-            caption="The payslip behind the message: every earning and deduction itemised, in both currencies."
-          />
+          <div className="max-w-md">
+            <Screen
+              src="/screens/payslip.png"
+              alt="A payslip: earnings, PAYE, AIDS levy, NSSA, pension and sector council dues itemised, with net pay shown in US$ and ZiG."
+              width={770}
+              height={805}
+              caption="The payslip behind the message: every earning and deduction itemised, in both currencies."
+            />
+          </div>
         </div>
       </Split>
 

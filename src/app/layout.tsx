@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
@@ -8,11 +8,15 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { site } from "@/lib/site";
 
 // Brand brief 6.3: one family does everything — Inter. Self-hosted
-// via next/font/google so there's no runtime round trip to
-// fonts.googleapis.com and FOIT doesn't flash the default.
-const inter = Inter({
+// from the official rsms release because Google's build strips the
+// stylistic sets (ss01/cv05/cv11) the product app renders with —
+// the Google file silently ignores font-feature-settings.
+const inter = localFont({
+  src: [
+    { path: "./fonts/InterVariable.woff2", weight: "100 900", style: "normal" },
+    { path: "./fonts/InterVariable-Italic.woff2", weight: "100 900", style: "italic" },
+  ],
   variable: "--font-inter",
-  subsets: ["latin"],
   display: "swap",
 });
 
